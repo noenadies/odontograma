@@ -107,10 +107,9 @@ color: #fff;
 <p id="idpmensaje">ppppppppppppp</p>
         
         
-        <button id="idbt" onclick="iniciatodo()">inicio</button>
-    	<button id="idbt2" onclick="pareload()">reload</button>
+
         <div id="phaser-example"></div>
-<p id="idtext">ooooo</p>
+
 		<script type="text/javascript">
 		
 
@@ -416,27 +415,6 @@ function create2() {
 game.stage.backgroundColor = "#444444";
 
 creleinemove();
-
-
-
-
-huesi1=game.add.sprite(vw*0.5,vh*0.125000000, 'd');
-    huesi1.id=22;
-    huesi1.anchor.set(0.5);
-    huesi1.scale.set(sc);
-    huesi1.inputEnabled = true;
-
-    huesi1.input.useHandCursor = true;
-   // huesi1.events.onInputDown.add(fd1, this);
-
-
-
-huesi1.fixedToCamera = true;
-huesi1.inputEnabled = true;
-huesi1.input.useHandCursor = true;
-
-huesi1.events.onInputDown.add(vbtci_onDown, this);
-
 
 
 
