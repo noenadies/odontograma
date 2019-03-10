@@ -432,7 +432,7 @@ try {    escribep("dentro try");
 
 
 for(var i in arrayvfpahser["dientes1"]){
-cread(i, parseFloat(arrayvfpahser["dientes1"][i].posx), parseFloat(arrayvfpahser["dientes1"][i].posy));
+cread(i, parseFloat(arrayvfpahser["dientes1"][i].posx), parseFloat(arrayvfpahser["dientes1"][i].posy),parseFloat(arrayvfpahser["dientes1"][i].diente));
     }
 
 
@@ -492,7 +492,7 @@ function escribep(st){
 
 
 function fd1(thiss){
-  escribep(thiss.id);
+  escribep(thiss.id+"   diente   "+thiss.diente+"  "+ thiss.x/vw);
   var vsube={posx:thiss.x/vw,posy:thiss.y/vh,iddiente:thiss.id};
 
 
@@ -555,9 +555,10 @@ function creadlineavertroja(i,porcenx,porceny){// creya  a los dientes
 
 // crea  los dientes 
 
-function cread(i,porcenx,porceny){
-    arrayspd.push({spd:game.add.sprite(vw*porcenx,vh*0.125000000, 'd'),id: arrayspd.length});
+function cread(i,porcenx,porceny,dientex){
+    arrayspd.push({spd:game.add.sprite(vw*porcenx,vh*porceny, 'd'),id: arrayspd.length});
     arrayspd[arrayspd.length-1].spd.id=i;
+	arrayspd[arrayspd.length-1].spd.diente=dientex;
     arrayspd[arrayspd.length-1].spd.anchor.set(0.5);
     arrayspd[arrayspd.length-1].spd.scale.set(sc);
     arrayspd[arrayspd.length-1].spd.inputEnabled = true;
