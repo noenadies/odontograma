@@ -75,9 +75,32 @@ font-size: 18px;
 color: #fff;
 
 	}
+
+
+#phaser-example{
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	width: 77%;
+	height: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
         </style>
     </head>
     <body>
+
+
+
 
 <p id="idpmensaje">ppppppppppppp</p>
         
@@ -86,11 +109,159 @@ color: #fff;
     	<button id="idbt2" onclick="pareload()">reload</button>
         <div id="phaser-example"></div>
 <p id="idtext">ooooo</p>
-        <script type="text/javascript">
-        var IDE_HOOK = false;
-        var VERSION = '2.2.2.box2d';
-    var vw = window.innerWidth;
-var vh = window.innerHeight;    
+		<script type="text/javascript">
+		
+
+
+
+
+
+
+
+		var vw=window.innerWidth*0.77;
+var  vh=window.innerHeight*0.8;
+//console.log(window.innerWidth +"   "+vw);
+
+var game;
+
+var vsube;
+var subiocualquiera=false;
+
+
+    var eliminarcualquierobjetos=false;
+    var  linearojav;
+    var arraylineasverticalroja=[];
+var fondoborar;
+var handle1;
+var handle2;
+var line1;
+var dpx=vw/2;
+var dpy=vh/2;
+var spd;
+var arrayspd=[];
+var dientposx=sc*35;
+var deltadientposx=sc*37;
+var sc=vw/1182.72;
+
+var idxdientes1=0;
+
+var arrarylineasvertrojassp=[];
+
+var elpunto="";
+ elpunto.x=0;
+elpunto.y=0;
+
+
+
+var boleliminarlinearojavertical=false;
+
+var idobjlineverticalrojaelimina="";
+var bolcrealineavertivalroja=false;
+var soydelostemplinerojaverti=false;
+
+var arrlieansrojas=[];
+
+var idxbtncrearlineroja=0;
+var bolcrearlinerojaverti=false;
+
+var splineaverticalrojatemp;
+var  cauntosobjslienavertirojacreado=0;
+var estocadodiente1lienarojaveti=false;
+var arrayvfpahser=[];
+
+
+function iniciabody(){
+
+   
+var config = {
+apiKey: "AIzaSyDDeEsPxBYxzisg4GDOpmYbHBLvIw6L_IY",
+authDomain: "mejorvargaslleras-4fd2e.firebaseapp.com",
+databaseURL: "https://mejorvargaslleras-4fd2e.firebaseio.com",
+projectId: "mejorvargaslleras-4fd2e",
+storageBucket: "mejorvargaslleras-4fd2e.appspot.com",
+messagingSenderId: "912759721594"
+};
+firebase.initializeApp(config);
+//traesolounavesphaser();
+
+
+   
+
+
+
+
+}
+
+
+
+
+
+
+
+
+  function traesolounavesphaser(){
+    firebase.database().ref().child("phaser").once("value", function(snapshot) {
+
+        arrayspd=[];
+        arrayvfpahser=[];
+        todoiniciadenuenvo();
+        document.getElementById("divodontograma").style.display="block";
+        document.getElementById("idmenueleimirobjetos").style.display="block";
+        arrayvfpahser=snapshot.val();
+
+        iniciaphaser();
+  
+
+      }, function (errorObject) {
+        console.log("The read failed: " + errorObject.code);
+      });
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var game = new Phaser.Game(vw, vh, Phaser.CANVAS, 'phaser-example', { preload: preload,create: create, update: update, render: render });
 var dm=100;
 var wheelBodies = [];
