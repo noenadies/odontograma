@@ -70,21 +70,23 @@ z-index: 2;
 
 	#idpmensaje{
 position: absolute;
-top: 10%;
+top: -3%;
 width: 20%;
 background-color: #000000;
 font-size: 18px;
 color: #fff;
-
+z-index:3;
 	}
 
 
 #phaser-example{
 	position: absolute;
-	top: 10%;
-	left: 15%;
-	width: 77%;
-	height: 80%;
+	top:0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index:1;
+	background-color: aqua
 }
 
 
@@ -119,8 +121,8 @@ color: #fff;
 
 
 
-		var vw=window.innerWidth*0.77;
-var  vh=window.innerHeight*0.8;
+		var vw=window.innerWidth*0.77/0.77;
+var  vh=window.innerHeight*0.8/0.8;
 //console.log(window.innerWidth +"   "+vw);
 
 var game;
@@ -211,7 +213,7 @@ traesolounavesphaser();
 
         iniciaphaser();
   
-console.log( arrayvfpahser);
+
       }, function (errorObject) {
         console.log("The read failed: " + errorObject.code);
       });
@@ -309,8 +311,8 @@ function todoiniciadenuenvo(){
 
 
 
-   vw=window.innerWidth*0.77;
- vh=window.innerHeight*0.8;
+   vw=window.innerWidth*0.77/0.77;
+ vh=window.innerHeight*0.8/0.8;
 //console.log(window.innerWidth +"   "+vw);
 
 
@@ -412,7 +414,7 @@ game.load.image('lineavroja', 'lineav.png');
 function create2() {
 
 
-game.stage.backgroundColor = "#444444";
+game.stage.backgroundColor = "#000000";
 
 creleinemove();
 
