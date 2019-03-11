@@ -1182,29 +1182,29 @@ traesolounavesphaser();
 // inicia createmp caries()
 
 
-
+console.log(vh);
 function creacariestemp(){
 
 
 	bolcrearlinerojaverti=true;
-  //  document.getElementById("idbtnlineverticaroja").style.backgroundColor="#4fd0df";
-    arraytempcaries.push({sp:game.add.sprite(tempdiete.x, tempdiete.y, 'caries')});
+  //  document.getElementById("idbtnlineverticaroja").style.backgroundColor="#4fd0df";(vw*6/1536) (vh*10/727)
+    arraytempcaries.push({sp:game.add.sprite(tempdiete.x-(vw*0/1536), tempdiete.y+(vh*18/727), 'caries')});
 
 
-	arraytempcaries[arrlieansrojas.length-1].sp.anchor.set(0.5);
+	arraytempcaries[arraytempcaries.length-1].sp.anchor.set(0.5);
   
-	arraytempcaries[arrlieansrojas.length-1].sp.scale.set(sc);
+	arraytempcaries[arraytempcaries.length-1].sp.scale.set(sc);
 
-	arraytempcaries[arrlieansrojas.length-1].sp.id=arrlieansrojas.length-1;
-	arraytempcaries[arrlieansrojas.length-1].sp.anchor.set(0.5);
-	arraytempcaries[arrlieansrojas.length-1].sp.scale.set(sc);
-	arraytempcaries[arrlieansrojas.length-1].sp.inputEnabled = true;
+	arraytempcaries[arraytempcaries.length-1].sp.id=arraytempcaries.length-1;
+	arraytempcaries[arraytempcaries.length-1].sp.anchor.set(0.5);
+	arraytempcaries[arraytempcaries.length-1].sp.scale.set(sc);
+	arraytempcaries[arraytempcaries.length-1].sp.inputEnabled = true;
 
-	arraytempcaries[arrlieansrojas.length-1].sp.input.useHandCursor = true;
-	arraytempcaries[arrlieansrojas.length-1].sp.events.onInputDown.add(eliminalinetemprolja2, this);
-	arraytempcaries[arrlieansrojas.length-1].sp.enhueso=true;
+	arraytempcaries[arraytempcaries.length-1].sp.input.useHandCursor = true;
+	arraytempcaries[arraytempcaries.length-1].sp.events.onInputDown.add(eliminalinetemprolja2, this);
+	arraytempcaries[arraytempcaries.length-1].sp.enhueso=true;
 
-	arraytempcaries[arrlieansrojas.length-1].sp.estehueso="tengo hueso";
+	arraytempcaries[arraytempcaries.length-1].sp.estehueso="tengo hueso";
 
 
 
@@ -1217,7 +1217,7 @@ function creacariestemp(){
 
 
 function eliminalinetemprolja2(thiss){
-	document.getElementById("idpaneleliminar").style.display="block";tempthiss.id=thiss.id
+	document.getElementById("idpaneleliminar").style.display="block";tempthiss=thiss;
 }
 
 
@@ -1257,10 +1257,17 @@ function fmenueliminarcancela(){
 
 
 
-function fmenueliminarelimina(thiss){
+function fmenueliminarelimina(){
+	alert("igual  "+ tempthiss.id);
 
+	arraytempcaries[tempthiss.id].sp.kill();
+	arraytempcaries[tempthiss.id].sp.enhueso=false;
+
+	arraytempcaries[tempthiss.id].sp.estehueso=" no tengo hueso";
 	for(var i in arraytempcaries){
-if(arraytempcaries.id==tempthiss.id){
+		console.log("es i");
+		console.log(i);
+if(arraytempcaries[i].id==String(tempthiss.id)){
 
 	arraytempcaries[i].sp.kill();
 	arraytempcaries[i].sp.enhueso=false;
@@ -1271,6 +1278,9 @@ if(arraytempcaries.id==tempthiss.id){
 }
 
 	}	document.getElementById("idpaneleliminar").style.display="none";
+
+alert(arraytempcaries[0].sp.enhueso);
+
 
 }
 
@@ -1299,10 +1309,10 @@ if(arraytempcaries.id==tempthiss.id){
 
 
 //menud  izquierdo funciones
-var temppositio="";
+var tempposition="";
 
 function  fonclif3(){
-
+	//tempposition.x= 
 
 }
 
