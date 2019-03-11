@@ -560,7 +560,7 @@ background-color: #1ffc95;
 		
 			<button onclick="creacariestemp();" class="clbthallazgos" >Caries</button>
 			<button onclick="creaedentulototaltemp();" class="clbthallazgos" >EDENTULO</button>
-			<button class="clbthallazgos" >Login</button>
+			<button onclick="creadientestraidoazul();" class="clbthallazgos" >Diente Extraido</button>
 		
 		  </div>
 	  
@@ -664,6 +664,28 @@ function fcerrarmenulatedercho(){
 
 
 
+
+
+
+
+var tempcreadientestraidoazu;
+
+
+
+var arraytempcreadientestraidoazul=[];
+var bolsoytempdientestraidoazul=true;
+
+
+
+
+
+
+
+
+
+
+
+var vactivodiente;
 
 var bolsoytempedentutempsp1a=false;
 var tempdieteeduntulo;
@@ -893,7 +915,8 @@ function todoiniciadenuenvo(){
     // solo iables 
 
 
-
+ arraytempcreadientestraidoazul=[];
+bolsoytempdientestraidoazul=false;
 
 
 
@@ -1043,7 +1066,9 @@ game.load.image('edentuloazul', 'edentuloazul.png');
 
 
 
+game.load.image('activodiente', 'activodiente.png');
 
+game.load.image('dienteausente', 'dienteausente.png');
 
 
 }
@@ -1056,11 +1081,11 @@ game.stage.backgroundColor = "#ffffff";
 creleinemove();
 
 
+ vactivodiente = game.add.sprite(vw*0.5,vh/2, 'activodiente');
 
 
 
-
-
+ vactivodiente.anchor.set(0.5);
 
 
 
@@ -1105,8 +1130,11 @@ cread(i, parseFloat(arrayvfpahser["dientes1"][i].posx), parseFloat(arrayvfpahser
 
 
 var idcorre=0;
-
+var rotavactivodiente=0;
 function update2() {
+	rotavactivodiente=rotavactivodiente+0.1;
+	vactivodiente.ratiton=rotavactivodiente;
+
   //  idcorre=  idcorre+0.02;
 //escribep(idcorre);
 
@@ -1137,7 +1165,9 @@ function escribep(st){
 
 function fd1(thiss){
 
-
+	vactivodiente.x=thiss.x;
+	vactivodiente.y=thiss.y;
+	vactivodiente.scale.set(sc*1.9);
 	document.getElementById("idmenulateralzquierdo").style.display="block";
   escribep(thiss.id+"   diente  aca "+thiss.diente+"  "+ thiss.x/vw);
   var vsube={posx:thiss.x/vw,posy:thiss.y/vh,iddiente:thiss.id};
@@ -1406,7 +1436,7 @@ function eliminalinetemprolja2(thiss){
 // esto es oara escalar
 bolsoyEDÉNTULO=false;
 // fin de escalar
-
+bolsoytempdientestraidoazul=false;
 
 
 	bolsoytempcaries=true;
@@ -1482,7 +1512,10 @@ function fmenueliminarcancela(){
 
 
 function fmenueliminarelimina(thiss){
-alert(bolsoytempedentutempsp1a+" "+bolsoytempcaries );
+
+
+
+
 if(bolsoytempcaries){
 
 	arraytempcaries[tempthiss.id].sp.kill();
@@ -1537,6 +1570,52 @@ bolsoytempcaries=false;
 	bolsoyEDÉNTULO=false;
 
 }
+
+
+
+
+
+	
+if(bolsoytempdientestraidoazul){
+
+	arraytempcreadientestraidoazul[tempcreadientestraidoazu.id].sp.kill();
+	arraytempcreadientestraidoazul[tempcreadientestraidoazu.id].sp.enhueso=false;
+	
+	arraytempcreadientestraidoazul[tempcreadientestraidoazu.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempcreadientestraidoazul[tempcreadientestraidoazu.id].sp.kill();
+	arraytempcreadientestraidoazul[tempcreadientestraidoazu.id].sp.enhueso=false;
+	
+	arraytempcreadientestraidoazul[tempcreadientestraidoazu.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	document.getElementById("idpaneleliminar").style.display="none";
+	
+	
+	bolsoytempdientestraidoazul=false;
+	bolsoytempcaries=false;
+	bolsoytempedentutempsp1a=false;
+	bolsoyEDÉNTULO=false;
+	
+	
+	
+	
+
+	
+	
+	
+	}
+	
+	
+
+
+
+
 
 
 
@@ -1657,7 +1736,7 @@ bolsoyEDÉNTULO=true;
 
 
 
-
+bolsoytempdientestraidoazul=false;
 	tempedentutempsp1a=thissx;
 	bolsoytempcaries=false;
 
@@ -1722,6 +1801,112 @@ escribep(bolsoyEDÉNTULO);
 
 
 //  fin  creando edentulo total
+
+
+
+
+
+
+
+
+
+function creadientestraidoazul(){
+
+	
+	arraytempcreadientestraidoazul.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'dienteausente')});
+
+
+
+
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.anchor.set(0.5);
+  
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.scale.set(sc);
+
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.id=arraytempcreadientestraidoazul.length-1;
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.anchor.set(0.5);
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.scale.set(sc);
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.inputEnabled = true;
+
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.input.useHandCursor = true;
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.events.onInputDown.add(farraytempcreadientestraidoazul, this);
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.enhueso=true;
+
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.estehueso="tengo hueso";
+
+
+  sptempmovercaries=arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp;
+
+
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.inputEnabled = true;
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.input.enableDrag(true);
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsoytempdientestraidoazul=true;
+
+	bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+}
+
+
+function farraytempcreadientestraidoazul(thiss){
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+tempcreadientestraidoazu =thiss;
+
+ bolsoytempdientestraidoazul=true;
+
+	bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+	siiraeliminar(thiss);
+}
+
+
+
+}
+
+
+
+
+
+
+
+// fin  crea dientre estraidoazul
+
+
+
+
+
+
+
+
+
 
 
 
