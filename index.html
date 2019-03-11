@@ -111,7 +111,21 @@ overflow-y: scroll;
 
 
 
+#idhallazgoydescrip2{
+	position: absolute;
+top:68%;
+left: 0%;
+width: 100%;
+height: 29%;
+background-color: #000000;
+opacity:0. 9;
+z-index: 500;
+background-color: rgb(5, 63, 63);
+overflow-y: scroll;
 
+
+
+}
 
 
 
@@ -275,6 +289,7 @@ color: #000000;
   
   .container {
 	padding: 16px;
+	
   }
   
   span.psw {
@@ -354,9 +369,92 @@ color: #000000;
 
 
 
+
+#idpaneleliminar{
+
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.9;
+	z-index: 550;
+}
+
+
+
+#idpmenueliminar{
+
+	position: absolute;
+	top: 10%;
+	left: 30%;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.9;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+#idbtmeneliminarceliminar{
+
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	width: 80px;
+	height: 40px;
+	background-color: #5a0707;
+	opacity: 0.9;
+	color: #ffffff;
+	font-size: 14px;
+	z-index: 551;
+
+}
+
+#idbtmeneliminarcancelar{
+	position: absolute;
+	top: 50%;
+	left: 60%;
+	width: 80px;
+	height: 40px;
+	background-color: #00522c;
+	opacity: 0.9;
+	color: #ffffff;
+	font-size: 14px;
+	z-index: 551;
+}
+
+#idbtmeneliminarcancelar:hover{
+	background-color: #1ffc95;
+}
+
+
+#idbtmeneliminarceliminar:hover{
+
+	background-color: #ff000d;
+}
         </style>
     </head>
     <body>
+
+
+
+
+<div id="idpaneleliminar">
+
+
+<button onclick="fmenueliminarcancela();" id="idbtmeneliminarcancelar">Cancelar</button>
+<button onclick="fmenueliminarelimina();"  id="idbtmeneliminarceliminar">Eliminar</button>
+<p id="idpmenueliminar">Eliminar</p>
+
+</div>
+
+
+
+
+
+
 
 <div id="idmenulateralzquierdo">
 
@@ -369,7 +467,7 @@ color: #000000;
 <button id="idb1carasmenuladerechofc">Fc</button>
 <button id="idb1carasmenuladerechof2">F2</button>
 <button id="idb1carasmenuladerechof1">F1</button>
-<button id="idb1carasmenuladerechof3">F3</button>
+<button onclick="fonclif3();" id="idb1carasmenuladerechof3">F3</button>
 </div>
 
 
@@ -422,6 +520,40 @@ color: #000000;
 
 </div>
 
+
+
+<div id="idhallazgoydescrip2">
+		<div id="id01" class="modal2">
+	  
+			<div class="modal-content animate" >
+			  <div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			
+			  </div>
+		  
+			  <div class="container"><br><br>
+	
+			
+				<button onclick="creacariestemp();" class="clbthallazgos" >Caries</button>
+				<button class="clbthallazgos" >Login</button>
+				<button class="clbthallazgos" >Login</button>
+			
+			  </div>
+		  
+		
+			  
+			</div>
+		  </div>
+	
+	
+	</div>
+
+
+
+
+
+
+
 	
 	</div>
 
@@ -462,7 +594,7 @@ function fcerrarmenulatedercho(){
 
 
 
-
+var tempthiss;
 
 
 var arraytempcaries=[];
@@ -472,7 +604,7 @@ var arraytempcaries=[];
 
 
 
-
+var tempdiete;
 
 		var vw=window.innerWidth*0.77/0.77;
 var  vh=window.innerHeight*0.8/0.8;
@@ -767,6 +899,14 @@ game.load.image('d', 'diente.png');
 
 game.load.image('lineavroja', 'lineav.png');
 
+
+game.load.image('caries', 'caries.png');
+
+
+
+
+
+
 }
 
 function create2() {
@@ -853,9 +993,10 @@ function fd1(thiss){
 
 	document.getElementById("idmenulateralderecho").style.display="block";
 	document.getElementById("idmenulateralzquierdo").style.display="block";
-  escribep(thiss.id+"   diente   "+thiss.diente+"  "+ thiss.x/vw);
+  escribep(thiss.id+"   diente  aca "+thiss.diente+"  "+ thiss.x/vw);
   var vsube={posx:thiss.x/vw,posy:thiss.y/vh,iddiente:thiss.id};
 
+ tempdiete=thiss;
 
 
 if(bolcrealineavertivalroja){ //sube();
@@ -1044,7 +1185,39 @@ traesolounavesphaser();
 
 function creacariestemp(){
 
-	arraytempcaries.push({sp:game.add.sprite});
+
+	bolcrearlinerojaverti=true;
+  //  document.getElementById("idbtnlineverticaroja").style.backgroundColor="#4fd0df";
+    arraytempcaries.push({sp:game.add.sprite(tempdiete.x, tempdiete.y, 'caries')});
+
+
+	arraytempcaries[arrlieansrojas.length-1].sp.anchor.set(0.5);
+  
+	arraytempcaries[arrlieansrojas.length-1].sp.scale.set(sc);
+
+	arraytempcaries[arrlieansrojas.length-1].sp.id=arrlieansrojas.length-1;
+	arraytempcaries[arrlieansrojas.length-1].sp.anchor.set(0.5);
+	arraytempcaries[arrlieansrojas.length-1].sp.scale.set(sc);
+	arraytempcaries[arrlieansrojas.length-1].sp.inputEnabled = true;
+
+	arraytempcaries[arrlieansrojas.length-1].sp.input.useHandCursor = true;
+	arraytempcaries[arrlieansrojas.length-1].sp.events.onInputDown.add(eliminalinetemprolja2, this);
+	arraytempcaries[arrlieansrojas.length-1].sp.enhueso=true;
+
+	arraytempcaries[arrlieansrojas.length-1].sp.estehueso="tengo hueso";
+
+
+
+
+
+
+
+}
+
+
+
+function eliminalinetemprolja2(thiss){
+	document.getElementById("idpaneleliminar").style.display="block";tempthiss.id=thiss.id
 }
 
 
@@ -1055,6 +1228,57 @@ function creacariestemp(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// todo lo del panel d e menueliminar
+
+function fmenueliminarcancela(){
+
+	document.getElementById("idpaneleliminar").style.display="none";
+}
+
+
+
+function fmenueliminarelimina(thiss){
+
+	for(var i in arraytempcaries){
+if(arraytempcaries.id==tempthiss.id){
+
+	arraytempcaries[i].sp.kill();
+	arraytempcaries[i].sp.enhueso=false;
+
+	arraytempcaries[i].sp.estehueso=" no tengo hueso";
+
+
+}
+
+	}	document.getElementById("idpaneleliminar").style.display="none";
+
+}
+
+
+
+
+
+// fin del panel de menu eliminar
 
 
 
@@ -1074,13 +1298,16 @@ function creacariestemp(){
 
 
 
+//menud  izquierdo funciones
+var temppositio="";
+
+function  fonclif3(){
 
 
+}
 
 
-
-
-
+//  fin menud  izquierdo funciones
 
 
 
