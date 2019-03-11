@@ -82,10 +82,11 @@ height: 20px;
 #idmenulateralderecho{
 
 position: absolute;
-top: 0%;
-left: 60%;
-width: 40%;
-height: 100%;
+top: 50%;
+left: 50%;
+width: 50%;
+height: 50%;
+transform:translate(-50%,-50%);
 background-color: #000000;
 opacity: 0.8;
 z-index: 500;
@@ -460,6 +461,51 @@ background-color: #1ffc95;
 
 	background-color: #ff000d;
 }
+
+
+
+
+
+
+
+
+#idbtmoverdrag{
+	position: absolute;
+	top: 80%;
+	left: 10%;
+	width: 80px;
+	height: 40px;
+	background-color: #00522c;
+	opacity: 0.9;
+	color: #ffffff;
+	font-size: 14px;
+	z-index: 551;
+}
+
+
+#idbtcalarxobjs{
+	position: absolute;
+	top: 8%;
+	left: 70%;
+	width: 30px;
+	height: 30px;
+	background-color: #00522c;
+	opacity: 0.9;
+	color: #ffffff;
+	font-size: 10px;
+	z-index: 551;
+	border-radius: 50%;
+	padding: 1px;
+	margin: auto;
+	text-align: center;
+	z-index: 501;
+}
+
+
+
+
+
+
         </style>
     </head>
     <body>
@@ -490,20 +536,45 @@ background-color: #1ffc95;
 <div id="idmenucarasdeldiente">
 
 	<button onclick="fonclif4();"  id="idb1carasmenuladerechof4">F4</button>
-<button onclick="fonclifc();"  id="idb1carasmenuladerechofc">Fc</button>
-<button  onclick="fonclif2();"  id="idb1carasmenuladerechof2">F2</button>
-<button  onclick="fonclif1();"  id="idb1carasmenuladerechof1">F1</button>
+<button onclick="fsieliminarx();"  id="idb1carasmenuladerechofc">Eliminar</button>
+<button  onclick="fsieditarclinica();"  id="idb1carasmenuladerechof2">Editar</button>
+<button  onclick="fidbtmoverdrag();"  id="idb1carasmenuladerechof1">Mover</button>
 <button onclick="fonclif3();" id="idb1carasmenuladerechof3">F3</button>
 
-<button onclick="fonclimenuD();" id="idb1carasmenuladerechomenuD">Menu D</button>
-
-</div>
-
 
 
 </div>
 
-<div id="idmenulateralderecho">
+
+<div id="idhallazgoydescrip2">
+	<div id="id01" class="modal2">
+  
+		<div class="modal-content animate" >
+		  <div class="imgcontainer">
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		
+		  </div>
+	  
+		  <div class="container"><br><br>
+			<button onclick="fidbtcalarxobjs();" id="idbtcalarxobjs"class="clbthallazgos" >scalarx</button>
+		
+			<button onclick="creacariestemp();" class="clbthallazgos" >Caries</button>
+			<button onclick="creaedentulototaltemp();" class="clbthallazgos" >EDENTULO</button>
+			<button class="clbthallazgos" >Login</button>
+		
+		  </div>
+	  
+	
+		  
+		</div>
+	  </div>
+
+
+</div>
+
+</div>
+
+<div id="idmenulateralderecho"><button onclick="fonclimenuD();" id="idb1carasmenuladerechomenuD">Menu D</button>
 
 <div id="idhallazgoydescrip">
 	<div id="id01" class="modal2">
@@ -538,6 +609,8 @@ background-color: #1ffc95;
 	  
 		
 			<button class="clbthallazgos" >Login</button>
+
+			
 		
 		  </div>
 	  
@@ -551,31 +624,6 @@ background-color: #1ffc95;
 
 
 
-<div id="idhallazgoydescrip2">
-		<div id="id01" class="modal2">
-	  
-			<div class="modal-content animate" >
-			  <div class="imgcontainer">
-				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-			
-			  </div>
-		  
-			  <div class="container"><br><br>
-	
-			
-				<button onclick="creacariestemp();" class="clbthallazgos" >Caries</button>
-				<button class="clbthallazgos" >Login</button>
-				<button class="clbthallazgos" >Login</button>
-			
-			  </div>
-		  
-		
-			  
-			</div>
-		  </div>
-	
-	
-	</div>
 
 
 
@@ -617,10 +665,36 @@ function fcerrarmenulatedercho(){
 
 
 
+var bolsoytempedentutempsp1a=false;
+var tempdieteeduntulo;
 
 
 
 
+
+
+
+var bolsoytempcaries=false;
+
+
+var scalatempedentutempsp1a=0.1;
+var arrayedentutempsp1atemp=[]; 
+var tempedentutempsp1a;
+
+
+
+
+
+
+var edentutempsp1a;
+var edentutempsp2a;
+var lineedentulotempazul;
+var midedentutempspa;
+
+
+
+
+var  bolecisteedetulo=false;
 
 
 var tempthiss;
@@ -818,6 +892,40 @@ function llama2(thiss){
 function todoiniciadenuenvo(){
     // solo iables 
 
+
+
+
+
+
+	bolsoytempedentutempsp1a=false;
+
+bolsoytempcaries=false;
+
+
+
+
+
+
+
+
+
+
+ scalatempedentutempsp1a=1;
+ arrayedentutempsp1atemp=[]; 
+
+
+
+
+
+
+
+
+  bolecisteedetulo=false;
+
+
+
+
+
 	tempposition={x:0,y:0};
 
 arraytempcaries=[];
@@ -931,6 +1039,7 @@ game.load.image('lineavroja', 'lineav.png');
 
 
 game.load.image('caries', 'caries.png');
+game.load.image('edentuloazul', 'edentuloazul.png');
 
 
 
@@ -1005,11 +1114,18 @@ function update2() {
 //escribep(arrlieansrojas.length+"     ccccc        "+cauntosobjslienavertirojacreado+" estocadodiente1lienarojaveti  " +estocadodiente1lienarojaveti);
 
 
+siexisteedentulotempupdate();
+
+
+
+
+
+
 }
 
 function render2() {
 
-
+	
 
 }
 
@@ -1021,12 +1137,13 @@ function escribep(st){
 
 function fd1(thiss){
 
-	document.getElementById("idmenulateralderecho").style.display="block";
+
 	document.getElementById("idmenulateralzquierdo").style.display="block";
   escribep(thiss.id+"   diente  aca "+thiss.diente+"  "+ thiss.x/vw);
   var vsube={posx:thiss.x/vw,posy:thiss.y/vh,iddiente:thiss.id};
 
  tempdiete=thiss;
+
 
 
 if(bolcrealineavertivalroja){ //sube();
@@ -1211,10 +1328,35 @@ traesolounavesphaser();
 
 // inicia createmp caries()
 
-
+var sieliminar=false;
 console.log(vh);
+var siarrastrar=true;
+
+var sieditarclinica=false;
+
+function fidbtmoverdrag(){
+	siarrastrar=true;
+
+	sieditarclinica=false;
+	sieliminar=false;
+}
+
+function fsieditarclinica(){
+siarrastrar=false;
+
+sieditarclinica=true;
+sieliminar=false;
+}
 
 
+
+function fsieliminarx(){
+	sieliminar=true;
+	siarrastrar=false;
+
+sieditarclinica=false;
+
+}
 function creacariestemp(){
 
 
@@ -1242,14 +1384,48 @@ function creacariestemp(){
 	sptempmovercaries=arraytempcaries[arraytempcaries.length-1].sp;
 
 
+	arraytempcaries[arraytempcaries.length-1].sp.inputEnabled = true;
 
+//  Allow dragging - the 'true' parameter will make the sprite snap to the center
+arraytempcaries[arraytempcaries.length-1].sp.input.enableDrag(true);
+
+
+
+
+
+
+	bolsoytempcaries=true;
+
+bolsoytempedentutempsp1a=false;
 
 }
 
 
 
 function eliminalinetemprolja2(thiss){
-	document.getElementById("idpaneleliminar").style.display="block";tempthiss=thiss;
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+
+
+	bolsoytempcaries=true;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+	siiraeliminar(thiss);
+}
+
+
+
 }
 
 
@@ -1257,11 +1433,27 @@ function eliminalinetemprolja2(thiss){
 
 
 
+function siarrastrsi(){
+
+}
+
+function  siiraeliminar(thiss){
+	document.getElementById("idpaneleliminar").style.display="block";
+	
+	
+	tempthiss=thiss;
+
+
+
+}
 
 
 
 
-
+function sieditarlo(thiss){
+	document.getElementById("idmenulateralderecho").style.display="block";
+	
+}
 
 
 
@@ -1289,27 +1481,62 @@ function fmenueliminarcancela(){
 
 
 
-function fmenueliminarelimina(){
-
+function fmenueliminarelimina(thiss){
+alert(bolsoytempedentutempsp1a+" "+bolsoytempcaries );
+if(bolsoytempcaries){
 
 	arraytempcaries[tempthiss.id].sp.kill();
 	arraytempcaries[tempthiss.id].sp.enhueso=false;
 
 	arraytempcaries[tempthiss.id].sp.estehueso=" no tengo hueso";
-	for(var i in arraytempcaries){
-		console.log("es i");
-		console.log(i);
-if(arraytempcaries[i].id==String(tempthiss.id)){
+//	for(var i in arraytempcaries){
 
-	arraytempcaries[i].sp.kill();
-	arraytempcaries[i].sp.enhueso=false;
+//if(arraytempcaries[i].id==String(tempthiss.id)){
 
-	arraytempcaries[i].sp.estehueso=" no tengo hueso";
+	arraytempcaries[tempthiss.id].sp.kill();
+	arraytempcaries[tempthiss.id].sp.enhueso=false;
 
+	arraytempcaries[tempthiss.id].sp.estehueso=" no tengo hueso";
+
+
+//}
+
+//	}	
+	
+	document.getElementById("idpaneleliminar").style.display="none";
+
+
+	bolsoytempcaries=false;
+	bolsoytempedentutempsp1a=false;
 
 }
+	
+if(bolsoytempedentutempsp1a){
 
-	}	document.getElementById("idpaneleliminar").style.display="none";
+	arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.kill();
+arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.enhueso=false;
+
+arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.estehueso=" no tengo hueso";
+
+
+
+
+	arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.kill();
+arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.enhueso=false;
+
+arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.estehueso=" no tengo hueso";
+
+
+
+
+	document.getElementById("idpaneleliminar").style.display="none";
+
+
+bolsoytempcaries=false;
+	bolsoytempedentutempsp1a=false;
+	bolsoyEDÉNTULO=false;
+
+}
 
 
 
@@ -1356,71 +1583,146 @@ cambifonclimenuD=true; }
 
 
 
-function  fonclif3(){
-	tempposition.x=vw*0/1536; 
-	tempposition.y=vh*18/727;
-	escribep(tempdiete.y+" ok  "+ arraytempcaries[sptempmovercaries.id].sp.y);
 
-	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
-	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
-	if((tempdiete.y+ tempposition.y*2)<arraytempcaries[sptempmovercaries.id].sp.y){
-	arraytempcaries[sptempmovercaries.id].sp.y=tempdiete.y;
+//  fin menud  izquierdo funciones
+
+
+
+
+
+// creando edentulo total
+
+ bolecisteedetulo=false;
+
+ 
+
+function creaedentulototaltemp(){
+
+
+
+  //  document.getElementById("idbtnlineverticaroja").style.backgroundColor="#4fd0df";(vw*6/1536) (vh*10/727)
+  arrayedentutempsp1atemp.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'edentuloazul')});
+
+
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.anchor.set(0.5);
+  
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.scale.set(sc);
+
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.id=arrayedentutempsp1atemp.length-1;
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.anchor.set(0.5);
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.scale.set(sc);
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.inputEnabled = true;
+
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.input.useHandCursor = true;
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.events.onInputDown.add(eliminatempedentutempsp1a, this);
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.enhueso=true;
+
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.estehueso="tengo hueso";
+
+
+	sptempedentutempsp1a=arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp;
+
+
+	arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.inputEnabled = true;
+
+//  Allow dragging - the 'true' parameter will make the sprite snap to the center
+arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.input.enableDrag(true);
+
+
+
+
+
+
+	bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=true;
+
+
+
+
+
+
+
+
+
+
+}
+var sptempedentutempsp1a;
+
+function eliminatempedentutempsp1a(thissx){ 
+
+// esto es oara escalar
+bolsoyEDÉNTULO=true;
+// fin de escalar
+
+
+
+
+	tempedentutempsp1a=thissx;
+	bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=true;
+
+	if(siarrastrar){ siarrastrsi(thissx);}
+
+	if(sieditarclinica){sieditarlo(thissx);}
+	if(sieliminar){
+		siiraeliminar(thissx);
+	}
+	
 
 }
 
+
+
+
+function fscalaedentutempsp1amas (){
+
+	scalatempedentutempsp1a=scalatempedentutempsp1a+0.1;
 }
 
-var xtempini=0;
-function  fonclif2(){
+function fscalaedentutempsp1amenos(){
 
-	tempposition.x=vw*18/1536; 
-	tempposition.y=vh*0/727;
-	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
-	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
-if((tempdiete.x+ tempposition.x)<arraytempcaries[sptempmovercaries.id].sp.x){
-	arraytempcaries[sptempmovercaries.id].sp.x=tempdiete.x;
-
-}
-
-
-
+scalatempedentutempsp1a=scalatempedentutempsp1a-0.1;
 }
 
 
-function  fonclif1(){
-	tempposition.x=vw*0/1536; 
-	tempposition.y=vh*-18/727;
-	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
-	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
-	if((tempdiete.y+ tempposition.y*2)>arraytempcaries[sptempmovercaries.id].sp.y){
-		arraytempcaries[sptempmovercaries.id].sp.y=tempdiete.y;
-		
+
+function siexisteedentulotempupdate(){
+	if(bolecisteedetulo){
+	
+
+
+
+
 		}
 }
-function  fonclif4(){
-	tempposition.x=vw*-18/1536; 
-	tempposition.y=vh*0/727;
-	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
-	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
-	if((tempdiete.x+ tempposition.x)>arraytempcaries[sptempmovercaries.id].sp.x){
-	arraytempcaries[sptempmovercaries.id].sp.x=tempdiete.x;
 
-}
-}
 
-function  fonclifc(){
-	tempposition.x=vw*0/1536; 
-	tempposition.y=vh*0/727;
-	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
-	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
 
-	arraytempcaries[sptempmovercaries.id].sp.x=tempdiete.x;
-	arraytempcaries[sptempmovercaries.id].sp.y=tempdiete.y;
+var bolsoyEDÉNTULO=false;
 
+function fidbtcalarxobjs(){
+	if(bolsoyEDÉNTULO){
+		arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.anchor.set(0);
+
+		arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.scale.set(arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.scale.x+1,
+		arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.scale.y)=false;
+
+
+	}
 
 
 }
-//  fin menud  izquierdo funciones
+
+
+
+
+
+
+
+//  fin  creando edentulo total
+
 
 
 
@@ -1433,7 +1735,7 @@ document.getElementById("idpaneleliminar").style.display="none";
 
 
 
-
+document.getElementById("idmenulateralderecho").style.display="none";
 
 
 
