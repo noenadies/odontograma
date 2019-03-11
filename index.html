@@ -57,7 +57,7 @@ z-index: 2;
 	#idpmensaje{
 position: absolute;
 left: 30%;
-top: -3%;
+top: 80%;
 width: 20%;
 background-color: #000000;
 font-size: 18px;
@@ -172,7 +172,7 @@ color: #000000;
 
 #idmenucarasdeldiente{
 	position: absolute;
-	top: 65%;
+	top: 25%;
 	left: 0%;
 	width: 100%;
 	height: 30%;
@@ -230,6 +230,32 @@ color: #000000;
 	height: 25%;
 	border-radius: 50%;
 }
+
+
+
+
+#idb1carasmenuladerechomenuD{
+
+	position: absolute;
+	top: 86%;
+	left: 70%;
+	transform: translate(0,-50%);
+	width: 20%;
+	height: 25%;
+
+	background-color: #086137;
+}
+
+
+
+
+
+#idb1carasmenuladerechomenuD:hover{
+
+
+background-color: #1ffc95;
+}
+
 
 
 
@@ -463,11 +489,14 @@ color: #000000;
 
 <div id="idmenucarasdeldiente">
 
-	<button id="idb1carasmenuladerechof4">F4</button>
-<button id="idb1carasmenuladerechofc">Fc</button>
-<button id="idb1carasmenuladerechof2">F2</button>
-<button id="idb1carasmenuladerechof1">F1</button>
+	<button onclick="fonclif4();"  id="idb1carasmenuladerechof4">F4</button>
+<button onclick="fonclifc();"  id="idb1carasmenuladerechofc">Fc</button>
+<button  onclick="fonclif2();"  id="idb1carasmenuladerechof2">F2</button>
+<button  onclick="fonclif1();"  id="idb1carasmenuladerechof1">F1</button>
 <button onclick="fonclif3();" id="idb1carasmenuladerechof3">F3</button>
+
+<button onclick="fonclimenuD();" id="idb1carasmenuladerechomenuD">Menu D</button>
+
 </div>
 
 
@@ -600,7 +629,7 @@ var tempthiss;
 var arraytempcaries=[];
 
 
-
+var tempposition={x:0,y:0};
 
 
 
@@ -609,7 +638,7 @@ var tempdiete;
 		var vw=window.innerWidth*0.77/0.77;
 var  vh=window.innerHeight*0.8/0.8;
 //console.log(window.innerWidth +"   "+vw);
-
+var sptempmovercaries;
 var game;
 
 var vsube;
@@ -789,6 +818,7 @@ function llama2(thiss){
 function todoiniciadenuenvo(){
     // solo iables 
 
+	tempposition={x:0,y:0};
 
 arraytempcaries=[];
 
@@ -1067,7 +1097,7 @@ function cread(i,porcenx,porceny,dientex){
 
     arrayspd[arrayspd.length-1].spd.input.useHandCursor = true;
     arrayspd[arrayspd.length-1].spd.events.onInputDown.add(fd1, this);
-	console.log(44444444444);
+	
   //arrayspd[arrayspd.length-1].spd.input.enableDrag(true);
 
    // console.log(arrayspd[arrayspd.length-1].spd.width);
@@ -1183,12 +1213,14 @@ traesolounavesphaser();
 
 
 console.log(vh);
+
+
 function creacariestemp(){
 
 
 	bolcrearlinerojaverti=true;
   //  document.getElementById("idbtnlineverticaroja").style.backgroundColor="#4fd0df";(vw*6/1536) (vh*10/727)
-    arraytempcaries.push({sp:game.add.sprite(tempdiete.x-(vw*0/1536), tempdiete.y+(vh*18/727), 'caries')});
+    arraytempcaries.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'caries')});
 
 
 	arraytempcaries[arraytempcaries.length-1].sp.anchor.set(0.5);
@@ -1207,7 +1239,7 @@ function creacariestemp(){
 	arraytempcaries[arraytempcaries.length-1].sp.estehueso="tengo hueso";
 
 
-
+	sptempmovercaries=arraytempcaries[arraytempcaries.length-1].sp;
 
 
 
@@ -1258,7 +1290,7 @@ function fmenueliminarcancela(){
 
 
 function fmenueliminarelimina(){
-	alert("igual  "+ tempthiss.id);
+
 
 	arraytempcaries[tempthiss.id].sp.kill();
 	arraytempcaries[tempthiss.id].sp.enhueso=false;
@@ -1279,7 +1311,7 @@ if(arraytempcaries[i].id==String(tempthiss.id)){
 
 	}	document.getElementById("idpaneleliminar").style.display="none";
 
-alert(arraytempcaries[0].sp.enhueso);
+
 
 
 }
@@ -1305,18 +1337,89 @@ alert(arraytempcaries[0].sp.enhueso);
 
 
 
+fonclimenuD()
 
-
-
+idb1carasmenuladerechomenuD
 //menud  izquierdo funciones
-var tempposition="";
+var cambifonclimenuD=true;
+function fonclimenuD(){
+if(cambifonclimenuD){document.getElementById("idmenulateralderecho").style.display="none"; cambifonclimenuD=false;}
+else{document.getElementById("idmenulateralderecho").style.display="block";
+cambifonclimenuD=true; }
+
+	
+}
+
+
+
+
+
+
 
 function  fonclif3(){
-	//tempposition.x= 
+	tempposition.x=vw*0/1536; 
+	tempposition.y=vh*18/727;
+	escribep(tempdiete.y+" ok  "+ arraytempcaries[sptempmovercaries.id].sp.y);
+
+	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
+	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
+	if((tempdiete.y+ tempposition.y*2)<arraytempcaries[sptempmovercaries.id].sp.y){
+	arraytempcaries[sptempmovercaries.id].sp.y=tempdiete.y;
+
+}
+
+}
+
+var xtempini=0;
+function  fonclif2(){
+
+	tempposition.x=vw*18/1536; 
+	tempposition.y=vh*0/727;
+	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
+	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
+if((tempdiete.x+ tempposition.x)<arraytempcaries[sptempmovercaries.id].sp.x){
+	arraytempcaries[sptempmovercaries.id].sp.x=tempdiete.x;
 
 }
 
 
+
+}
+
+
+function  fonclif1(){
+	tempposition.x=vw*0/1536; 
+	tempposition.y=vh*-18/727;
+	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
+	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
+	if((tempdiete.y+ tempposition.y*2)>arraytempcaries[sptempmovercaries.id].sp.y){
+		arraytempcaries[sptempmovercaries.id].sp.y=tempdiete.y;
+		
+		}
+}
+function  fonclif4(){
+	tempposition.x=vw*-18/1536; 
+	tempposition.y=vh*0/727;
+	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
+	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
+	if((tempdiete.x+ tempposition.x)>arraytempcaries[sptempmovercaries.id].sp.x){
+	arraytempcaries[sptempmovercaries.id].sp.x=tempdiete.x;
+
+}
+}
+
+function  fonclifc(){
+	tempposition.x=vw*0/1536; 
+	tempposition.y=vh*0/727;
+	arraytempcaries[sptempmovercaries.id].sp.y=tempposition.y+arraytempcaries[sptempmovercaries.id].sp.y;
+	arraytempcaries[sptempmovercaries.id].sp.x=tempposition.x+arraytempcaries[sptempmovercaries.id].sp.x;
+
+	arraytempcaries[sptempmovercaries.id].sp.x=tempdiete.x;
+	arraytempcaries[sptempmovercaries.id].sp.y=tempdiete.y;
+
+
+
+}
 //  fin menud  izquierdo funciones
 
 
@@ -1325,8 +1428,7 @@ function  fonclif3(){
 
 iniciabody();
 
-
-
+document.getElementById("idpaneleliminar").style.display="none";
 
 
 
