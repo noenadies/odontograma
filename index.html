@@ -1821,7 +1821,7 @@ escribep(bolsoyEDÉNTULO);
 
 
 
-
+//ok
 function creadientestraidoazul(){
 
 	
@@ -1882,6 +1882,7 @@ function farraytempcreadientestraidoazul(thiss){
 bolsoyEDÉNTULO=false;
 // fin de escalar
 
+bolsoytempcreadienteimpactadoazullinehroja=false;
 tempcreadientestraidoazu =thiss;
 
  bolsoytempdientestraidoazul=true;
@@ -1924,6 +1925,332 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+//  fin  creando edentulo total
+
+
+
+
+
+
+
+
+
+function creadientestraidoazul2(){
+
+	
+	arraytempcreadientestraidoazul.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'dienteausente')});
+
+
+
+
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.anchor.set(0.5);
+  
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.scale.set(sc);
+
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.id=arraytempcreadientestraidoazul.length-1;
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.anchor.set(0.5);
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.scale.set(sc);
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.inputEnabled = true;
+
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.input.useHandCursor = true;
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.events.onInputDown.add(farraytempcreadientestraidoazul, this);
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.enhueso=true;
+
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.estehueso="tengo hueso";
+
+
+  sptempmovercaries=arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp;
+
+
+  arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.inputEnabled = true;
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.input.enableDrag(true);
+
+
+
+
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+
+
+
+
+ bolsoytempdientestraidoazul=true;
+
+	bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+}
+
+
+function farraytempcreadientestraidoazul2(thiss){
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+
+
+
+tempcreadientestraidoazu =thiss;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+
+
+
+ bolsoytempdientestraidoazul=true;
+
+	bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+	siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+// fin  crea dientre estraidoazul
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  creando diente imactado azullinerojahorizontal total
+
+
+
+
+
+
+
+var arraytempcreadienteimpactadoazullinehroja=[];
+var bolsoytempcreadienteimpactadoazullinehroja=false;
+function creadienteimpactadoazulrojoh(){
+
+	
+arraytempcreadientestraidoazul.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'dienteausente')});
+
+
+
+
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.anchor.set(0.5);
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.scale.set(sc);
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.id=arraytempcreadientestraidoazul.length-1;
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.anchor.set(0.5);
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.scale.set(sc);
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.inputEnabled = true;
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.input.useHandCursor = true;
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.events.onInputDown.add(farraytempcreadientestraidoazul, this);
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.enhueso=true;
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.estehueso="tengo hueso";
+
+
+sptempmovercaries=arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp;
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.inputEnabled = true;
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.input.enableDrag(true);
+
+
+
+
+
+
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+
+
+
+
+bolsoytempdientestraidoazul=true;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+	
+arraytempcreadienteimpactadoazullinehroja.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'dienteausente')});
+
+
+
+
+
+
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.anchor.set(0.5);
+
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.scale.set(sc);
+
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.id=arraytempcreadienteimpactadoazullinehroja.length-1;
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.anchor.set(0.5);
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.scale.set(sc);
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.inputEnabled = true;
+
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.input.useHandCursor = true;
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.events.onInputDown.add(farraytempcreadientinpactadazullirol, this);
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.enhueso=true;
+
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.estehueso="tengo hueso";
+
+
+sptempmovercaries=arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp;
+
+
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.inputEnabled = true;
+
+
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.input.enableDrag(true);
+
+
+
+
+
+
+arraytempcreadienteimpactadoazullinehroja[arraytempcreadienteimpactadoazullinehroja.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+
+
+bolsoytempcreadienteimpactadoazullinehroja=true;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempcreadientinpactadazullirol(thiss){
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+tempcreadientestraidoazu =thiss;
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=true;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+//
+//  fin  creando diente imactado azullinerojahorizontal total
 
 
 
