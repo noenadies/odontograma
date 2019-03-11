@@ -1087,7 +1087,7 @@ creleinemove();
 
  vactivodiente.anchor.set(0.5);
 
-
+ vactivodiente.scale.set(sc*1.9);
 
 
 try {    escribep("dentro try");
@@ -1167,7 +1167,7 @@ function fd1(thiss){
 
 	vactivodiente.x=thiss.x;
 	vactivodiente.y=thiss.y;
-	vactivodiente.scale.set(sc*1.9);
+
 	document.getElementById("idmenulateralzquierdo").style.display="block";
   escribep(thiss.id+"   diente  aca "+thiss.diente+"  "+ thiss.x/vw);
   var vsube={posx:thiss.x/vw,posy:thiss.y/vh,iddiente:thiss.id};
@@ -1245,6 +1245,9 @@ function cread(i,porcenx,porceny,dientex){
     arrayspd[arrayspd.length-1].spd.input.useHandCursor = true;
     arrayspd[arrayspd.length-1].spd.events.onInputDown.add(fd1, this);
 	
+	arrayspd[arrayspd.length-1].spd.soyelenarray=arrayspd.length-1;
+
+
   //arrayspd[arrayspd.length-1].spd.input.enableDrag(true);
 
    // console.log(arrayspd[arrayspd.length-1].spd.width);
@@ -1420,7 +1423,7 @@ function creacariestemp(){
 arraytempcaries[arraytempcaries.length-1].sp.input.enableDrag(true);
 
 
-
+arraytempcaries[arraytempcaries.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
 
 
 
@@ -1455,6 +1458,9 @@ if(sieliminar){
 }
 
 
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 }
 
@@ -1709,7 +1715,7 @@ arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.input.enableDrag(tr
 
 
 
-
+arrayedentutempsp1atemp[arrayedentutempsp1atemp.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
 
 
 	bolsoytempcaries=false;
@@ -1749,6 +1755,12 @@ bolsoytempedentutempsp1a=true;
 		siiraeliminar(thissx);
 	}
 	
+	vactivodiente.x=arrayspd[thissx.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thissx.estoyconeldienteenarray].spd.y;
+
+
+
+
 
 }
 
@@ -1849,8 +1861,7 @@ arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.input
 
 
 
-
-
+arraytempcreadientestraidoazul[arraytempcreadientestraidoazul.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
 
 
 
@@ -1886,6 +1897,18 @@ if(sieditarclinica){sieditarlo(thiss);}
 if(sieliminar){
 	siiraeliminar(thiss);
 }
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
 
 
 
