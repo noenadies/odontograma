@@ -567,10 +567,11 @@ background-color: #1ffc95;
 			<button onclick="creadientestraidoazul();" class="clbthallazgos" >Diente Extraido</button>
 
 			<button onclick="creadienteimpactadoazulrojoh();" class="clbthallazgos" >Diente Impactado</button>
-
+			<button onclick="creadientempEXTRACCIONINDICADA();" class="clbthallazgos" >EXTRACCION INDICADA</button>
+			<button onclick="creadientempREMANENTERADICULAR();" class="clbthallazgos" >REMANENTE RADICULAR</button>
 		
 		  </div>
-	  
+		  
 	
 		  
 		</div>
@@ -668,6 +669,19 @@ function fcerrarmenulatedercho(){
 	document.getElementById("idmenulateralderecho").style.display="none";
 	document.getElementById("idmenulateralzquierdo").style.display="none";
 }
+
+
+
+
+var sptempEXTRACCIONINDICADA;
+var bolarrayempEXTRACCIONINDICADA=false;
+var arrayempEXTRACCIONINDICADA=[];
+
+
+
+
+
+
 
 
 var sptempcreadienteimpactadoazullinehroja;
@@ -925,6 +939,17 @@ function todoiniciadenuenvo(){
 
 
 
+
+ bolarrayempEXTRACCIONINDICADA=false;
+ arrayempEXTRACCIONINDICADA=[];
+
+
+
+
+
+
+
+
 	 arraytempcreadienteimpactadoazullinehroja=[];
  bolsoytempcreadienteimpactadoazullinehroja=false;
 
@@ -1090,6 +1115,19 @@ game.load.image('dienteausente', 'dienteausente.png');
 
 
 game.load.image('dienteausenteimpactado', 'dienteausenteimpactado.png');
+
+
+
+game.load.image('EXTRACCIONINDICADA', 'EXTRACCIONINDICADA.png');
+
+
+game.load.image('REMANENTERADICULAR', 'REMANENTERADICULAR.png');
+
+
+
+
+
+
 
 
 
@@ -1472,8 +1510,19 @@ bolsoyEDÉNTULO=false;
 bolsoytempcreadienteimpactadoazullinehroja=false;
 bolsoytempdientestraidoazul=false;
 
-
+//fpp
 	bolsoytempcaries=true;
+
+
+	bolarraytempREMANENTERADICULAR=false;
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+
 
 bolsoytempedentutempsp1a=false;
 
@@ -1699,7 +1748,109 @@ bolsoyEDÉNTULO=false;
 
 
 
+	
+if(bolarrayempEXTRACCIONINDICADA){
 
+
+
+
+arrayempEXTRACCIONINDICADA[sptempEXTRACCIONINDICADA.id].sp.kill();
+arrayempEXTRACCIONINDICADA[sptempEXTRACCIONINDICADA.id].sp.enhueso=false;
+
+arrayempEXTRACCIONINDICADA[sptempEXTRACCIONINDICADA.id].sp.estehueso=" no tengo hueso";
+
+
+
+
+arrayempEXTRACCIONINDICADA[sptempEXTRACCIONINDICADA.id].sp.kill();
+arrayempEXTRACCIONINDICADA[sptempEXTRACCIONINDICADA.id].sp.enhueso=false;
+
+arrayempEXTRACCIONINDICADA[sptempEXTRACCIONINDICADA.id].sp.estehueso=" no tengo hueso";
+
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+	
+if(bolarraytempREMANENTERADICULAR){
+
+
+	arraytempREMANENTERADICULAR[sptempREMANENTERADICULAR.id].sp.kill();
+	arraytempREMANENTERADICULAR[sptempREMANENTERADICULAR.id].sp.enhueso=false;
+	
+	arraytempREMANENTERADICULAR[sptempREMANENTERADICULAR.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempREMANENTERADICULAR[sptempREMANENTERADICULAR.id].sp.kill();
+	arraytempREMANENTERADICULAR[sptempREMANENTERADICULAR.id].sp.enhueso=false;
+	
+	arraytempREMANENTERADICULAR[sptempREMANENTERADICULAR.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+//pff
 
 
 
@@ -1819,6 +1970,13 @@ function eliminatempedentutempsp1a(thissx){
 // esto es oara escalar
 bolsoyEDÉNTULO=true;
 // fin de escalar
+
+
+//fpp 
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
 
 bolsoytempcreadienteimpactadoazullinehroja=false;
 
@@ -1962,10 +2120,22 @@ function farraytempcreadientestraidoazul(thiss){
 bolsoyEDÉNTULO=false;
 // fin de escalar
 
+//fpp
+
+bolsoytempdientestraidoazul=true;
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
 bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
 tempcreadientestraidoazu =thiss;
 
- bolsoytempdientestraidoazul=true;
+
 
 	bolsoytempcaries=false;
 
@@ -2088,9 +2258,10 @@ bolsoyEDÉNTULO=false;
 // fin de escalar
 
 
-
-
+//fpp
+bolarrayempEXTRACCIONINDICADA=false;
 tempcreadientestraidoazu =thiss;
+bolarraytempREMANENTERADICULAR=false;
 
 bolsoytempcreadienteimpactadoazullinehroja=false;
 
@@ -2232,14 +2403,17 @@ bolsoytempedentutempsp1a=false;
 
 
 function farraytempcreadientinpactadazullirol(thiss){
+
+// fpp
+
 // esto es oara escalar
 bolsoyEDÉNTULO=false;
 // fin de escalar
 
 sptempcreadienteimpactadoazullinehroja =thiss;
+bolarraytempREMANENTERADICULAR=false;
 
-
-
+bolarrayempEXTRACCIONINDICADA=false;
 
 bolsoytempcreadienteimpactadoazullinehroja=true;
 
@@ -2288,6 +2462,342 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ok
+
+
+
+
+//  creando farrayempEXTRACCIONINDICADA
+
+
+
+
+
+function creadientempEXTRACCIONINDICADA(){
+
+	
+
+
+	
+	arrayempEXTRACCIONINDICADA.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'EXTRACCIONINDICADA')});
+
+
+
+
+
+
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.anchor.set(0.5);
+	
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.scale.set(sc);
+	
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.id=arrayempEXTRACCIONINDICADA.length-1;
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.anchor.set(0.5);
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.scale.set(sc);
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.inputEnabled = true;
+	
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.input.useHandCursor = true;
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.events.onInputDown.add(farrayempEXTRACCIONINDICADA, this);
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.enhueso=true;
+	
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.estehueso="tengo hueso";
+	
+	
+	sptempEXTRACCIONINDICADA=arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp;
+	
+	
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.inputEnabled = true;
+	
+	
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.input.enableDrag(true);
+	
+	
+	
+	
+	
+	
+	arrayempEXTRACCIONINDICADA[arrayempEXTRACCIONINDICADA.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	
+	
+
+bolarrayempEXTRACCIONINDICADA=true;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farrayempEXTRACCIONINDICADA(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempEXTRACCIONINDICADA =thiss;
+
+
+
+bolarrayempEXTRACCIONINDICADA=true;
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+//
+//  fin farrayempEXTRACCIONINDICADA
+
+
+
+
+//  creando farrayempEXTRACCIONINDICADA
+
+
+var arraytempREMANENTERADICULAR=[];
+var bolarraytempREMANENTERADICULAR=false;
+var sptempREMANENTERADICULAR;
+
+function creadientempREMANENTERADICULAR(){
+
+	
+	
+	arraytempREMANENTERADICULAR.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'REMANENTERADICULAR')});
+
+
+
+
+
+
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.anchor.set(0.5);
+	
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.scale.set(sc);
+	
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.id=arraytempREMANENTERADICULAR.length-1;
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.anchor.set(0.5);
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.scale.set(sc);
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.inputEnabled = true;
+	
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.input.useHandCursor = true;
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.events.onInputDown.add(farraytempREMANENTERADICULAR, this);
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.enhueso=true;
+	
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.estehueso="tengo hueso";
+	
+	
+	sptempREMANENTERADICULAR=arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp;
+	
+	
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.inputEnabled = true;
+	
+	
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.input.enableDrag(true);
+	
+	
+	
+	
+	
+	
+	arraytempREMANENTERADICULAR[arraytempREMANENTERADICULAR.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	
+	
+	
+	
+	sptempREMANENTERADICULAR
+
+bolarraytempREMANENTERADICULAR=true;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempREMANENTERADICULAR(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempREMANENTERADICULAR =thiss;
+
+
+
+
+bolarraytempREMANENTERADICULAR=true;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+//
+//  fin farrayempEXTRACCIONINDICADA
 
 
 
