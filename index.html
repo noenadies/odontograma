@@ -584,6 +584,7 @@ background-color: #1ffc95;
 			<button onclick="creadientempTRANSPOSICIÓNDENTAL();" class="clbthallazgos" >TRANSPOSICIÓN DENTAl</button>
 			<button onclick="creadientempSUPERNUMERARIO();" class="clbthallazgos" >SUPERNUMERARIO</button>
 			<button onclick="creadientempCOMPROMISODEFURCA();" class="clbthallazgos" >COMPROMISO DE FURCA</button>
+			<button onclick="creadientempMACRODONCIA();" class="clbthallazgos" >MACRODONCIA</button>
 		
 		  </div>
 		  
@@ -691,6 +692,15 @@ function fcerrarmenulatedercho(){
 // variables
 
 
+
+
+
+
+
+
+var arraytempCOMPROMISODEFURCA=[];
+var sptempCOMPROMISODEFURCA;
+var bolsptempCOMPROMISODEFURCA=false;
 
 
 
@@ -1138,6 +1148,16 @@ function todoiniciadenuenvo(){
 
 
 
+ arraytempCOMPROMISODEFURCA=[];
+
+ bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+
+
 
  arraytempSUPERNUMERARIO=[];
 
@@ -1547,6 +1567,9 @@ game.load.image('COMPROMISODEFURCA', 'COMPROMISODEFURCA.png');
 
 
 
+game.load.image('MACRODONCIA', 'MACRODONCIA.png');
+
+
 
 
 
@@ -1930,6 +1953,14 @@ bolsoytempdientestraidoazul=false;
 //fpp
 
 bolsoytempcaries=true;
+
+
+
+bolsptempMACRODONCIA=false;
+bolsptempMACRODONCIA=false;
+
+
+
 
 
 
@@ -3938,6 +3969,159 @@ bolarrayempEXTRACCIONINDICADA=false;
 
 
 
+
+if(bolsptempMACRODONCIA){
+
+
+	
+
+
+	arraytempMACRODONCIA[sptempMACRODONCIA.id].sp.kill();
+	arraytempMACRODONCIA[sptempMACRODONCIA.id].sp.enhueso=false;
+	
+	arraytempMACRODONCIA[sptempMACRODONCIA.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempMACRODONCIA[sptempMACRODONCIA.id].sp.kill();
+	arraytempMACRODONCIA[sptempMACRODONCIA.id].sp.enhueso=false;
+	
+	arraytempMACRODONCIA[sptempMACRODONCIA.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+
+
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+
+
+
+
+bolsptempMACRODONCIA=false;
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+bolsptempMIGRACION=false;
+
+
+
+
+
+
+bolsptempGIROVERSION=false;
+
+
+
+
+
+
+bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+bolsptempDIASTEMA=false;
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
 //pff
 
 
@@ -4070,7 +4254,7 @@ bolsoytempedentutempsp1a=true;
 
 
 
-
+bolsptempMACRODONCIA=false;
 
 bolsptempCOMPROMISODEFURCA=false;
 
@@ -4280,7 +4464,7 @@ bolsoytempdientestraidoazul=true;
 
 
 
-
+bolsptempMACRODONCIA=false;
 bolsptempCOMPROMISODEFURCA=false;
 
 
@@ -4482,8 +4666,7 @@ bolsptempGIROVERSION=false;
 
 
 
-
-
+bolsptempMACRODONCIA=false;
 
 
 
@@ -4681,7 +4864,7 @@ bolsoytempcreadienteimpactadoazullinehroja=true;
 
 
 
-
+bolsptempMACRODONCIA=false;
 
 
 bolsptempCOMPROMISODEFURCA=false;
@@ -4954,7 +5137,7 @@ bolarrayempEXTRACCIONINDICADA=true;
 
 
 
-
+bolsptempMACRODONCIA=false;
 
 
 bolsptempCOMPROMISODEFURCA=false;
@@ -5173,7 +5356,7 @@ bolarraytempREMANENTERADICULAR=true;
 
 
 
-
+bolsptempMACRODONCIA=false;
 
 
 bolsptempCOMPROMISODEFURCA=false;
@@ -5402,7 +5585,7 @@ bolarraytempOBTURACIONCONAMALGAMA=true;
 
 
 
-
+bolsptempMACRODONCIA=false;
 
 
 bolsptempCOMPROMISODEFURCA=false;
@@ -5624,7 +5807,7 @@ bolsptempOBTURACIONCONRESINA=true;
 
 
 
-
+bolsptempMACRODONCIA=false;
 
 bolsptempCOMPROMISODEFURCA=false;
 
@@ -5848,7 +6031,7 @@ sptempOBTURACIÓNTEMPORAL=thiss;
 
 
 
-
+ bolsptempMACRODONCIA=false;
 
 
  bolsptempCOMPROMISODEFURCA=false;
@@ -6103,6 +6286,16 @@ bolsptempRESTAURACIONDESBORDANTE=true;
 
 
 
+bolsptempMACRODONCIA=false;
+
+
+bolsptempMACRODONCIA=false;
+
+
+
+
+
+
 bolsptempCOMPROMISODEFURCA=false;
 bolsptempSUPERNUMERARIO=false;
 
@@ -6347,7 +6540,7 @@ sptempFRACTURA=thiss;
 
 
 
-
+ bolsptempMACRODONCIA=false;
 
 
 
@@ -6602,6 +6795,13 @@ bolsptempCONTACTOABIERTO=true;
 
 
 
+
+
+
+
+
+
+bolsptempMACRODONCIA=false;
 
 
 bolsptempCOMPROMISODEFURCA=false;
@@ -6864,6 +7064,13 @@ sptempDIASTEMA=thiss;
 
 
  bolsptempDIASTEMA=true;
+
+
+
+
+
+ bolsptempMACRODONCIA=false;
+
 
 
 
@@ -7133,6 +7340,14 @@ sptempSUPERFICIEDESGASTADA=thiss;
 
  bolsptempSUPERFICIEDESGASTADA=true;
 
+
+
+
+
+
+
+
+ bolsptempMACRODONCIA=false;
 
 
 
@@ -7416,7 +7631,7 @@ bolsptempINTRUSION=true;
 
 
 
-
+bolsptempMACRODONCIA=false;
 
 bolsptempCOMPROMISODEFURCA=false;
 
@@ -7706,7 +7921,7 @@ sptempEXTRUSIÓN=thiss;
  bolsptempEXTRUSIÓN=true;
 
 
-
+ bolsptempMACRODONCIA=false;
 
 
 
@@ -8000,6 +8215,15 @@ sptempGIROVERSION=thiss;
 
 
  bolsptempGIROVERSION=true;
+
+
+ bolsptempMACRODONCIA=false;
+
+
+
+
+
+
 
 
 
@@ -8319,6 +8543,17 @@ sptempGIROVERSION=thiss;
 
 
  bolsptempMIGRACION=true;
+
+
+
+ bolsptempMACRODONCIA=false;
+
+
+
+
+
+
+
 
 
 
@@ -8644,6 +8879,14 @@ sptempTRANSPOSICIÓNDENTAL=thiss;
 
 
  bolsptempTRANSPOSICIÓNDENTAL=true;
+
+ bolsptempMACRODONCIA=false;
+
+
+
+
+
+
 
 
 
@@ -8982,6 +9225,15 @@ sptempSUPERNUMERARIO=thiss;
 
 bolsptempSUPERNUMERARIO=true;
 
+bolsptempMACRODONCIA=false;
+
+
+
+
+
+
+
+
 
 
 
@@ -9150,10 +9402,6 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 //creadientempCOMPROMISODEFURCA()
 	
-var arraytempCOMPROMISODEFURCA=[];
-var sptempCOMPROMISODEFURCA;
-var bolsptempCOMPROMISODEFURCA=false;
-
 
 
 	
@@ -9339,6 +9587,19 @@ sptempCOMPROMISODEFURCA=thiss;
 bolsptempCOMPROMISODEFURCA=true;
 
 
+bolsptempMACRODONCIA=false;
+
+
+
+
+
+
+
+
+
+
+
+
 bolsptempSUPERNUMERARIO=false;
 
 
@@ -9498,6 +9759,396 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 
 // fin creadientempCOMPROMISODEFURCA()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//creadientempMACRODONCIA()
+	
+var arraytempMACRODONCIA=[];
+var sptempMACRODONCIA;
+var bolsptempMACRODONCIA=false;
+
+
+
+	
+	
+
+	function creadientempMACRODONCIA(){
+	
+		
+		
+
+	
+
+	
+
+	
+	
+		
+		arraytempMACRODONCIA.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'MACRODONCIA')});
+	
+	
+	
+	
+	
+	
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.anchor.set(0.5);
+	   
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.scale.set(sc);
+	   
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.id= arraytempMACRODONCIA.length-1;
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.anchor.set(0.5);
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.scale.set(sc);
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.inputEnabled = true;
+	   
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.input.useHandCursor = true;
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.events.onInputDown.add(farraytempMACRODONCIA, this);
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.enhueso=true;
+	   
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.estehueso="tengo hueso";
+	   
+	   
+		sptempMACRODONCIA= arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp;
+	   
+	   
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.inputEnabled = true;
+	   
+	   
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.input.enableDrag(true);
+	   
+	   
+	   
+	   
+	   
+	   
+		arraytempMACRODONCIA[ arraytempMACRODONCIA.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	   
+
+
+
+
+
+
+
+
+bolsptempMACRODONCIA=true;
+
+
+
+
+
+ bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+		bolsptempMIGRACION=false;
+
+
+
+
+
+	   
+	
+ bolsptempGIROVERSION=true;
+
+
+
+
+
+ bolsptempEXTRUSIÓN=true;
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+	
+	
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=true;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempMACRODONCIA(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempMACRODONCIA=thiss;
+
+
+
+
+bolsptempMACRODONCIA=true;
+
+
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+
+
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+
+ bolsptempMIGRACION=false;
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempGIROVERSION=false;
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+	
+
+
+
+
+
+
+		
+ bolsptempFRACTURA=false;
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+// fin creadientempMACRODONCIA()
+
+
+
+
+
+
+
 
 
 
