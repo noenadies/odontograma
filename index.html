@@ -591,12 +591,14 @@ background-color: #1ffc95;
 			<button onclick="creadientempTRATAMIENTODECONDUCTOS();" class="clbthallazgos" >TRATAMIENTO DE CONDUCTOS</button>
 			<button onclick="creadientempCORONATEMPORAL();" class="clbthallazgos" >CORONA TEMPORAL</button>
 			<button onclick="creadientempCORONADEFINITIVA();" class="clbthallazgos" >CORONA DEFINITIVA</button>
+			<button onclick="creadientempPUENTEFIJO();" class="clbthallazgos" >PUENTE FIJO</button>
+			<button onclick="creadientempAPARATOORTODÓNTICOFIJO();" class="clbthallazgos" >APARATO ORTODÓNTICO FIJO</button>
 		
 		  </div>
 		 
 
 		  
-		   
+		     
 		 
 		</div>
 	  </div>
@@ -698,6 +700,30 @@ function fcerrarmenulatedercho(){
 
 
 // variables
+
+
+
+
+
+var arraytempPUENTEFIJO=[];
+var sptempPUENTEFIJO;
+var bolsptempPUENTEFIJO=false;
+
+
+
+
+
+
+
+
+
+var arraytempCORONADEFINITIVA=[];
+var sptempCORONADEFINITIVA;
+var bolsptempCORONADEFINITIVA=false;
+
+
+
+
 
 
 
@@ -1210,7 +1236,20 @@ function todoiniciadenuenvo(){
 
 
 
+ arraytempPUENTEFIJO=[];
+ bolsptempPUENTEFIJO=false;
 
+
+
+
+
+
+
+ arraytempCORONADEFINITIVA=[];
+	 bolsptempCORONADEFINITIVA=false;
+	
+	
+	
 
 
  arraytempCORONATEMPORAL=[];
@@ -1736,6 +1775,32 @@ game.load.image('CORONADEFINITIVA', 'CORONADEFINITIVA.png');
 
 
 
+
+
+game.load.image('PUENTEFIJO', 'PUENTEFIJO.png');
+
+
+
+
+
+
+
+
+
+
+
+
+
+game.load.image('APARATOORTODÓNTICOFIJO', 'APARATOORTODÓNTICOFIJO.png');
+
+
+
+
+
+
+
+
+
 }
 
 function create2() {
@@ -2113,6 +2178,17 @@ bolsoytempdientestraidoazul=false;
 bolsoytempcaries=true;
 
 
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+
+
+bolsptempPUENTEFIJO=false;
 
 
 bolsptempCORONADEFINITIVA=false;
@@ -5262,6 +5338,347 @@ bolarrayempEXTRACCIONINDICADA=false;
 
 
 
+if(bolsptempPUENTEFIJO){
+
+
+	
+
+
+	arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.kill();
+	arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.enhueso=false;
+	
+	arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.kill();
+	arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.enhueso=false;
+	
+	arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+
+
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+bolsptempPUENTEFIJO=false;
+
+bolsptempCORONATEMPORAL=false;
+
+
+
+bolsptempCORONADEFINITIVA=false;
+
+bolsptempTRATAMIENTODECONDUCTOS=false;
+
+bolsptempIMPLANTE=false;
+
+bolsptempMOVILIDAD=false;
+
+bolsptempMICRODONCIA=false;
+
+
+
+bolsptempMACRODONCIA=false;
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+bolsptempMIGRACION=false;
+
+
+
+
+
+
+bolsptempGIROVERSION=false;
+
+
+
+
+
+
+bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+bolsptempDIASTEMA=false;
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(bolsptempAPARATOORTODÓNTICOFIJO){
+
+
+	
+
+
+	arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.kill();
+	arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.enhueso=false;
+	
+	arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.kill();
+	arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.enhueso=false;
+	
+	arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+
+
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+
+bolsptempPUENTEFIJO=false;
+
+bolsptempCORONATEMPORAL=false;
+
+
+
+bolsptempCORONADEFINITIVA=false;
+
+bolsptempTRATAMIENTODECONDUCTOS=false;
+
+bolsptempIMPLANTE=false;
+
+bolsptempMOVILIDAD=false;
+
+bolsptempMICRODONCIA=false;
+
+
+
+bolsptempMACRODONCIA=false;
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+bolsptempMIGRACION=false;
+
+
+
+
+
+
+bolsptempGIROVERSION=false;
+
+
+
+
+
+
+bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+bolsptempDIASTEMA=false;
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
 
 
 
@@ -5393,6 +5810,14 @@ bolsoyEDÉNTULO=true;
 
 
 bolsoytempedentutempsp1a=true;
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+bolsptempPUENTEFIJO=false;
+
 
 
 
@@ -5553,7 +5978,27 @@ escribep(bolsoyEDÉNTULO);
 
 	}
 
+	if(bolsptempPUENTEFIJO){
+	//	arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.anchor.set(0);
+	escribep(bolsoyEDÉNTULO);
+	arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.scale.set(arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.scale.x+1,arraytempPUENTEFIJO[sptempPUENTEFIJO.id].sp.scale.y);
 
+
+	}
+
+	if(bolsptempAPARATOORTODÓNTICOFIJO){
+		//	arrayedentutempsp1atemp[tempedentutempsp1a.id].sp.anchor.set(0);
+		escribep(bolsoyEDÉNTULO);
+		arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.scale.set(arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.scale.x+1,arraytempAPARATOORTODÓNTICOFIJO[sptempAPARATOORTODÓNTICOFIJO.id].sp.scale.y);
+	
+	
+		}
+	
+
+
+
+	   
+	//okk
 }
 
 
@@ -5635,6 +6080,13 @@ bolsoyEDÉNTULO=false;
 //fpp
 
 bolsoytempdientestraidoazul=true;
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+bolsptempPUENTEFIJO=false;
+
 
 
 bolsptempCORONADEFINITIVA=false;
@@ -5862,6 +6314,17 @@ bolsptempTRATAMIENTODECONDUCTOS=false;
 
 
 
+
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+bolsptempPUENTEFIJO=false;
+
+
 bolsptempCORONADEFINITIVA=false;
 
 
@@ -6073,6 +6536,14 @@ bolsoyEDÉNTULO=false;
 // fin de escalar
 
 bolsoytempcreadienteimpactadoazullinehroja=true;
+
+
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+bolsptempPUENTEFIJO=false;
 
 
 
@@ -6377,12 +6848,12 @@ sptempEXTRACCIONINDICADA =thiss;
 
 
 
-
+bolsptempAPARATOORTODÓNTICOFIJO=false;
 
 bolsptempCORONATEMPORAL=false;
 
 
-
+bolsptempPUENTEFIJO=false;
 
 
 bolarrayempEXTRACCIONINDICADA=true;
@@ -6628,6 +7099,14 @@ sptempREMANENTERADICULAR =thiss;
 
 
 bolarraytempREMANENTERADICULAR=true;
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+bolsptempPUENTEFIJO=false;
+
+
+
 
 
 
@@ -6882,6 +7361,24 @@ bolarraytempOBTURACIONCONAMALGAMA=true;
 
 
 
+
+
+
+
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+bolsptempPUENTEFIJO=false;
+
+
+
+
+
+
+
 bolsptempCORONADEFINITIVA=false;
 
 bolsptempCORONATEMPORAL=false;
@@ -7120,6 +7617,13 @@ bolsptempOBTURACIONCONRESINA=true;
 
 
 
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+bolsptempPUENTEFIJO=false;
 
 
 
@@ -7363,6 +7867,15 @@ sptempOBTURACIÓNTEMPORAL=thiss;
 
 
 
+
+
+
+
+
+
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+ bolsptempPUENTEFIJO=false;
 
 
 
@@ -7642,6 +8155,20 @@ bolsptempRESTAURACIONDESBORDANTE=true;
 
 
 
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+bolsptempPUENTEFIJO=false;
+
+
+
+
+
+
+
+
+
+
 bolsptempCORONADEFINITIVA=false;
 
 bolsptempCORONATEMPORAL=false;
@@ -7914,6 +8441,12 @@ sptempFRACTURA=thiss;
 
 
 
+
+
+
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+ bolsptempPUENTEFIJO=false;
 
 
 
@@ -8198,6 +8731,14 @@ bolsptempCONTACTOABIERTO=true;
 
 
 
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+bolsptempPUENTEFIJO=false;
 
 
 
@@ -8496,9 +9037,9 @@ sptempDIASTEMA=thiss;
  bolsptempDIASTEMA=true;
 
 
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
 
-
-
+ bolsptempPUENTEFIJO=false;
 
 
 
@@ -8799,8 +9340,8 @@ sptempSUPERFICIEDESGASTADA=thiss;
 
 
 
-
-
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
+ bolsptempPUENTEFIJO=false;
 
 
  bolsptempCORONADEFINITIVA=false;
@@ -9108,8 +9649,8 @@ sptempINTRUSION=thiss;
 bolsptempINTRUSION=true;
 
 
-
-
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+bolsptempPUENTEFIJO=false;
 
 
 
@@ -9427,10 +9968,10 @@ sptempEXTRUSIÓN=thiss;
 
 
  bolsptempEXTRUSIÓN=true;
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
 
 
-
-
+ bolsptempPUENTEFIJO=false;
 
 
 
@@ -9761,6 +10302,16 @@ sptempGIROVERSION=thiss;
 
 
  bolsptempGIROVERSION=true;
+
+
+
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+ bolsptempPUENTEFIJO=false;
+
+
+
+
 
 
 
@@ -10122,6 +10673,24 @@ sptempGIROVERSION=thiss;
 
 
 
+
+
+
+
+
+
+
+
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+
+
+
+
+
+ bolsptempPUENTEFIJO=false;
 
 
 
@@ -10487,6 +11056,18 @@ sptempTRANSPOSICIÓNDENTAL=thiss;
 
 
 
+
+
+
+
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+
+
+
+ bolsptempPUENTEFIJO=false;
 
 
 
@@ -10861,6 +11442,18 @@ bolsptempSUPERNUMERARIO=true;
 
 
 
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+
+
+
+bolsptempPUENTEFIJO=false;
 
 
 
@@ -11249,6 +11842,28 @@ sptempCOMPROMISODEFURCA=thiss;
 
 
 bolsptempCOMPROMISODEFURCA=true;
+
+
+
+
+
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+
+bolsptempPUENTEFIJO=false;
+
+
+
+
+
+
+
 
 
 
@@ -11662,6 +12277,16 @@ bolsptempMACRODONCIA=true;
 
 
 
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+bolsptempPUENTEFIJO=false;
+
+
+
 bolsptempCORONADEFINITIVA=false;
 
 
@@ -12061,6 +12686,25 @@ sptempMICRODONCIA=thiss;
 
 
 bolsptempMICRODONCIA=true;
+
+
+
+
+
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+
+
+bolsptempPUENTEFIJO=false;
+
+
+
 
 
 
@@ -12487,6 +13131,13 @@ bolsptempMOVILIDAD=true;
 
 
 
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+bolsptempPUENTEFIJO=false;
+
+
+
 bolsptempCORONADEFINITIVA=false;
 
 
@@ -12889,6 +13540,19 @@ sptempIMPLANTE=thiss;
 
 
 
+
+
+
+
+
+
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+
+
+ bolsptempPUENTEFIJO=false;
 
 
  bolsptempCORONADEFINITIVA=false;
@@ -13306,6 +13970,15 @@ bolsptempTRATAMIENTODECONDUCTOS=true;
 
 
 
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+bolsptempPUENTEFIJO=false;
 
 
 
@@ -13739,6 +14412,13 @@ sptempCORONATEMPORAL=thiss;
 
 
 
+ bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+ bolsptempPUENTEFIJO=false;
+
+
+
 
 
  bolsptempCORONADEFINITIVA=false;
@@ -13968,11 +14648,6 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 //creadientempCORONADEFINITIVA()
 	
-var arraytempCORONADEFINITIVA=[];
-var sptempCORONADEFINITIVA;
-var bolsptempCORONADEFINITIVA=false;
-
-
 
 	
 	
@@ -14199,6 +14874,13 @@ bolsptempCORONADEFINITIVA=true;
 
 
 
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+bolsptempPUENTEFIJO=false;
+
+
+
+
 
 
 
@@ -14414,11 +15096,946 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 }
 
 
-// fin creadientempCORONADEFINITIVA()
+// fin 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+//creadientempPUENTEFIJO()
+	
+
+
+
+	
+	
+
+	function creadientempPUENTEFIJO(){
+	
+		
+		
+
+	
+
+	
+
+	
+	
+		
+		arraytempPUENTEFIJO.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'PUENTEFIJO')});
+	
+	
+	
+	
+	
+	
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.anchor.set(0.5);
+	   
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.scale.set(sc);
+	   
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.id= arraytempPUENTEFIJO.length-1;
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.anchor.set(0.5);
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.scale.set(sc);
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.inputEnabled = true;
+	   
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.input.useHandCursor = true;
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.events.onInputDown.add(farraytempPUENTEFIJO, this);
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.enhueso=true;
+	   
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.estehueso="tengo hueso";
+	   
+	   
+		sptempPUENTEFIJO= arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp;
+	   
+	   
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.inputEnabled = true;
+	   
+	   
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.input.enableDrag(true);
+	   
+	   
+	   
+	   
+	   
+	   
+		arraytempPUENTEFIJO[ arraytempPUENTEFIJO.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	   
+
+
+
+
+
+
+bolsptempPUENTEFIJO=true;
+
+bolsptempCORONADEFINITIVA=false;
+
+
+
+
+
+
+ bolsptempCORONATEMPORAL=false;
+ bolsptempTRATAMIENTODECONDUCTOS=false;
+
+
+
+
+ bolsptempIMPLANTE=false;
+
+
+
+bolsptempMOVILIDAD=false;
+
+
+
+bolsptempMICRODONCIA=false;
+
+bolsptempMACRODONCIA=false;
+
+
+
+
+
+ bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+		bolsptempMIGRACION=false;
+
+
+
+
+
+	   
+	
+ bolsptempGIROVERSION=true;
+
+
+
+
+
+ bolsptempEXTRUSIÓN=true;
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+	
+	
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=true;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempPUENTEFIJO(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempPUENTEFIJO=thiss;
+
+
+
+
+
+
+
+
+bolsptempPUENTEFIJO=true;
+
+
+
+
+
+
+
+
+
+bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+bolsptempCORONADEFINITIVA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempCORONATEMPORAL=false;
+
+bolsptempTRATAMIENTODECONDUCTOS=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempIMPLANTE=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bolsptempMOVILIDAD=false;
+
+
+
+
+
+
+
+
+bolsptempMICRODONCIA=false;
+bolsptempMACRODONCIA=false;
+
+
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+
+
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+
+ bolsptempMIGRACION=false;
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempGIROVERSION=false;
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+	
+
+
+
+
+
+
+		
+ bolsptempFRACTURA=false;
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+// fin creadientempPUENTEFIJO()
+
+
+
+
+
+
+
+
+
+//creadientempAPARATOORTODÓNTICOFIJO()
+	
+var arraytempAPARATOORTODÓNTICOFIJO=[];
+var sptempAPARATOORTODÓNTICOFIJO;
+var bolsptempAPARATOORTODÓNTICOFIJO=false;
+
+
+
+	
+	
+
+	function creadientempAPARATOORTODÓNTICOFIJO(){
+	
+		
+		
+
+	
+
+	
+
+	
+	
+		
+		arraytempAPARATOORTODÓNTICOFIJO.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'APARATOORTODÓNTICOFIJO')});
+	
+	
+	
+	
+	
+	
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.anchor.set(0.5);
+	   
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.scale.set(sc);
+	   
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.id= arraytempAPARATOORTODÓNTICOFIJO.length-1;
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.anchor.set(0.5);
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.scale.set(sc);
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.inputEnabled = true;
+	   
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.input.useHandCursor = true;
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.events.onInputDown.add(farraytempAPARATOORTODÓNTICOFIJO, this);
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.enhueso=true;
+	   
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.estehueso="tengo hueso";
+	   
+	   
+		sptempAPARATOORTODÓNTICOFIJO= arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp;
+	   
+	   
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.inputEnabled = true;
+	   
+	   
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.input.enableDrag(true);
+	   
+	   
+	   
+	   
+	   
+	   
+		arraytempAPARATOORTODÓNTICOFIJO[ arraytempAPARATOORTODÓNTICOFIJO.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	   
+
+
+
+
+
+ bolsptempAPARATOORTODÓNTICOFIJO=true;
+
+
+bolsptempPUENTEFIJO=false;
+
+bolsptempCORONADEFINITIVA=false;
+
+
+
+
+
+
+ bolsptempCORONATEMPORAL=false;
+ bolsptempTRATAMIENTODECONDUCTOS=false;
+
+
+
+
+ bolsptempIMPLANTE=false;
+
+
+
+bolsptempMOVILIDAD=false;
+
+
+
+bolsptempMICRODONCIA=false;
+
+bolsptempMACRODONCIA=false;
+
+
+
+
+
+ bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+		bolsptempMIGRACION=false;
+
+
+
+
+
+	   
+	
+ bolsptempGIROVERSION=true;
+
+
+
+
+
+ bolsptempEXTRUSIÓN=true;
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+	
+	
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=true;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempAPARATOORTODÓNTICOFIJO(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempAPARATOORTODÓNTICOFIJO=thiss;
+
+
+
+
+
+
+
+ bolsptempAPARATOORTODÓNTICOFIJO=true;
+
+
+
+
+
+
+
+
+
+bolsptempPUENTEFIJO=false;
+
+bolsptempCORONADEFINITIVA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempCORONATEMPORAL=false;
+
+bolsptempTRATAMIENTODECONDUCTOS=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempIMPLANTE=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bolsptempMOVILIDAD=false;
+
+
+
+
+
+
+
+
+bolsptempMICRODONCIA=false;
+bolsptempMACRODONCIA=false;
+
+
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+
+
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+
+ bolsptempMIGRACION=false;
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempGIROVERSION=false;
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+	
+
+
+
+
+
+
+		
+ bolsptempFRACTURA=false;
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+// fin creadientempAPARATOORTODÓNTICOFIJO()
 
 
 
