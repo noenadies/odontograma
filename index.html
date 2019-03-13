@@ -582,10 +582,11 @@ background-color: #1ffc95;
 			<button onclick="creadientempGIROVERSION();" class="clbthallazgos" >GIROVERSION</button>
 			<button onclick="creadientempMIGRACION();" class="clbthallazgos" >MIGRACION</button>
 			<button onclick="creadientempTRANSPOSICIÓNDENTAL();" class="clbthallazgos" >TRANSPOSICIÓN DENTAl</button>
+			<button onclick="creadientempSUPERNUMERARIO();" class="clbthallazgos" >SUPERNUMERARIO</button>
 		
 		  </div>
 		  
-		  creadientempTRANSPOSICIÓNDENTAL()
+		 
 		 
 		</div>
 	  </div>
@@ -687,6 +688,25 @@ function fcerrarmenulatedercho(){
 
 
 // variables
+
+
+
+
+
+
+var arraytempTRANSPOSICIÓNDENTAL=[];
+var sptempTRANSPOSICIÓNDENTAL;
+var bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1102,6 +1122,20 @@ function todoiniciadenuenvo(){
 
 
 
+ arraytempTRANSPOSICIÓNDENTAL=[];
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+
+
  arraytempMIGRACION=[];
 
  bolsptempMIGRACION=false;
@@ -1464,6 +1498,25 @@ game.load.image('MIGRACION', 'MIGRACION.png');
 
 
 game.load.image('TRANSPOSICIÓNDENTAL', 'TRANSPOSICIÓNDENTAL.png');
+
+
+
+
+
+
+
+game.load.image('SUPERNUMERARIO', 'SUPERNUMERARIO.png');
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1850,6 +1903,19 @@ bolsoytempdientestraidoazul=false;
 //fpp
 
 bolsoytempcaries=true;
+
+
+
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
 
 
 
@@ -3520,6 +3586,161 @@ bolarrayempEXTRACCIONINDICADA=false;
 
 
 
+
+
+
+
+
+
+
+if(bolsptempSUPERNUMERARIO){
+
+
+	
+
+
+	arraytempSUPERNUMERARIO[sptempSUPERNUMERARIO.id].sp.kill();
+	arraytempSUPERNUMERARIO[sptempSUPERNUMERARIO.id].sp.enhueso=false;
+	
+	arraytempSUPERNUMERARIO[sptempSUPERNUMERARIO.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempSUPERNUMERARIO[sptempSUPERNUMERARIO.id].sp.kill();
+	arraytempSUPERNUMERARIO[sptempSUPERNUMERARIO.id].sp.enhueso=false;
+	
+	arraytempSUPERNUMERARIO[sptempSUPERNUMERARIO.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+bolsptempMIGRACION=false;
+
+
+
+
+
+
+bolsptempGIROVERSION=false;
+
+
+
+
+
+
+bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+bolsptempDIASTEMA=false;
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
 //pff
 
 
@@ -3648,7 +3869,7 @@ bolsoyEDÉNTULO=true;
 bolsoytempedentutempsp1a=true;
 
 
-
+bolsptempSUPERNUMERARIO=false;
 
 bolsptempTRANSPOSICIÓNDENTAL=false;
 
@@ -3848,7 +4069,7 @@ bolsoytempdientestraidoazul=true;
 
 
 
-
+bolsptempSUPERNUMERARIO=false;
 
 bolsptempTRANSPOSICIÓNDENTAL=false;
 
@@ -4037,7 +4258,7 @@ bolsptempGIROVERSION=false;
 
 
 
-
+bolsptempSUPERNUMERARIO=false;
 bolsptempTRANSPOSICIÓNDENTAL=false;
 
 bolsptempMIGRACION=false;
@@ -4225,7 +4446,7 @@ bolsoytempcreadienteimpactadoazullinehroja=true;
 
 
 
-
+bolsptempSUPERNUMERARIO=false;
 
 bolsptempTRANSPOSICIÓNDENTAL=false;
 
@@ -4488,6 +4709,16 @@ bolarrayempEXTRACCIONINDICADA=true;
 
 
 
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
 bolsptempTRANSPOSICIÓNDENTAL=false;
 
 bolsptempMIGRACION=false;
@@ -4687,7 +4918,7 @@ bolarraytempREMANENTERADICULAR=true;
 
 
 
-
+bolsptempSUPERNUMERARIO=false;
 
 
 
@@ -4897,6 +5128,18 @@ sptempOBTURACIONCONAMALGAMA=thiss;
 
 
 bolarraytempOBTURACIONCONAMALGAMA=true;
+
+
+
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
 
 
 
@@ -5113,6 +5356,15 @@ bolsptempOBTURACIONCONRESINA=true;
 
 
 
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+
+
 bolsptempTRANSPOSICIÓNDENTAL=false;
 bolsptempMIGRACION=false;
 
@@ -5320,6 +5572,15 @@ sptempOBTURACIÓNTEMPORAL=thiss;
 
  bolsptempOBTURACIÓNTEMPORAL=true;
 
+
+
+
+
+
+
+
+
+ bolsptempSUPERNUMERARIO=false;
 
 
 
@@ -5564,7 +5825,7 @@ bolsptempRESTAURACIONDESBORDANTE=true;
 
 
 
-
+bolsptempSUPERNUMERARIO=false;
 
 
 
@@ -5812,6 +6073,13 @@ sptempFRACTURA=thiss;
 
 
 
+ bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+
  bolsptempTRANSPOSICIÓNDENTAL=false;
 
 
@@ -6039,6 +6307,15 @@ sptempCONTACTOABIERTO=thiss;
 
 
 bolsptempCONTACTOABIERTO=true;
+
+
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
 
 
 
@@ -6302,6 +6579,15 @@ sptempDIASTEMA=thiss;
 
 
 
+
+ bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+
+
  bolsptempTRANSPOSICIÓNDENTAL=false;
 
  bolsptempMIGRACION=false;
@@ -6555,6 +6841,14 @@ sptempSUPERFICIEDESGASTADA=thiss;
 
 
  bolsptempSUPERFICIEDESGASTADA=true;
+
+
+
+
+
+
+ bolsptempSUPERNUMERARIO=false;
+
 
 
 
@@ -6828,6 +7122,17 @@ sptempINTRUSION=thiss;
 
 
 bolsptempINTRUSION=true;
+
+
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
 
 
 
@@ -7109,6 +7414,15 @@ sptempEXTRUSIÓN=thiss;
 
  bolsptempEXTRUSIÓN=true;
 
+
+
+
+
+
+
+
+
+ bolsptempSUPERNUMERARIO=false;
 
 
 
@@ -7402,7 +7716,7 @@ sptempGIROVERSION=thiss;
 
 
 
-
+ bolsptempSUPERNUMERARIO=false;
 
 
  bolsptempTRANSPOSICIÓNDENTAL=false;
@@ -7720,7 +8034,7 @@ sptempGIROVERSION=thiss;
 
 
 
-
+ bolsptempSUPERNUMERARIO=false;
 
 
  bolsptempTRANSPOSICIÓNDENTAL=false;
@@ -7865,10 +8179,6 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 //creadientempTRANSPOSICIÓNDENTAL()
 	
-var arraytempTRANSPOSICIÓNDENTAL=[];
-var sptempTRANSPOSICIÓNDENTAL;
-var bolsptempTRANSPOSICIÓNDENTAL=false;
-
 
 
 	
@@ -8049,6 +8359,349 @@ sptempTRANSPOSICIÓNDENTAL=thiss;
 
 
 
+ bolsptempSUPERNUMERARIO=false;
+
+
+
+ bolsptempMIGRACION=false;
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempGIROVERSION=false;
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+	
+
+
+
+
+
+
+		
+ bolsptempFRACTURA=false;
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+// fin creadientempTRANSPOSICIÓNDENTAL()
+
+
+
+
+
+
+
+//creadientempSUPERNUMERARIO()
+	
+var arraytempSUPERNUMERARIO=[];
+var sptempSUPERNUMERARIO;
+var bolsptempSUPERNUMERARIO=false;
+
+
+
+	
+	
+
+	function creadientempSUPERNUMERARIO(){
+	
+		
+		
+
+	
+
+	
+
+	
+	
+		
+		arraytempSUPERNUMERARIO.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'SUPERNUMERARIO')});
+	
+	
+	
+	
+	
+	
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.anchor.set(0.5);
+	   
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.scale.set(sc);
+	   
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.id= arraytempSUPERNUMERARIO.length-1;
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.anchor.set(0.5);
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.scale.set(sc);
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.inputEnabled = true;
+	   
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.input.useHandCursor = true;
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.events.onInputDown.add(farraytempSUPERNUMERARIO, this);
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.enhueso=true;
+	   
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.estehueso="tengo hueso";
+	   
+	   
+		sptempSUPERNUMERARIO= arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp;
+	   
+	   
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.inputEnabled = true;
+	   
+	   
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.input.enableDrag(true);
+	   
+	   
+	   
+	   
+	   
+	   
+		arraytempSUPERNUMERARIO[ arraytempSUPERNUMERARIO.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	   
+
+
+bolsptempSUPERNUMERARIO=true;
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+		bolsptempMIGRACION=false;
+
+
+
+
+
+	   
+	
+ bolsptempGIROVERSION=true;
+
+
+
+
+
+ bolsptempEXTRUSIÓN=true;
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+	
+	
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=true;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempSUPERNUMERARIO(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempSUPERNUMERARIO=thiss;
+
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=true;
+
+
+
+
+
+
+
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
 
 
 
@@ -8191,6 +8844,14 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 
 // fin creadientempTRANSPOSICIÓNDENTAL()
+
+
+
+
+
+
+
+
 
 
 
