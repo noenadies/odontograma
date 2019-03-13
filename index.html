@@ -574,10 +574,11 @@ background-color: #1ffc95;
 			<button onclick="creadientempOBTURACIÓNTEMPORAL();" class="clbthallazgos" >OBTURACIÓN TEMPORAL</button>
 			<button onclick="creadientempRESTAURACIONDESBORDANTE();" class="clbthallazgos" >RESTAURACION DESBORDANTE</button>
 			<button onclick="creadientempFRACTURA();" class="clbthallazgos" >FRACTURA</button>
+			<button onclick="creadientempCONTACTOABIERTO();" class="clbthallazgos" >CONTACTO ABIERTO</button>
 		
 		  </div>
 		  
-		  
+		 
 		  
 		</div>
 	  </div>
@@ -674,6 +675,29 @@ function fcerrarmenulatedercho(){
 	document.getElementById("idmenulateralderecho").style.display="none";
 	document.getElementById("idmenulateralzquierdo").style.display="none";
 }
+
+
+
+
+
+
+
+
+
+
+var arraytempFRACTURA=[];
+var sptempFRACTURA;
+var bolsptempFRACTURA=false;
+
+
+
+	
+
+
+
+
+
+
 
 
 
@@ -979,6 +1003,21 @@ function todoiniciadenuenvo(){
 
 
 
+
+	 arraytempFRACTURA=[];
+
+bolsptempFRACTURA=false;
+
+
+
+	
+arraytempOBTURACIONCONAMALGAMA=[];
+ bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
 arraytempOBTURACIONCONRESINA=[];
 
  bolsptempOBTURACIONCONRESINA=false;
@@ -1211,8 +1250,7 @@ game.load.image('RESTAURACIONDESBORDANTE', 'RESTAURACIONDESBORDANTE.png');
 
 game.load.image('FRACTURA', 'FRACTURA.png');
 
-
-
+game.load.image('CONTACTOABIERTO', 'CONTACTOABIERTO.png');
 
 
 
@@ -1605,6 +1643,9 @@ bolsoytempdientestraidoazul=false;
 //fpp
 
 bolsoytempcaries=true;
+
+
+bolsptempCONTACTOABIERTO=false;
 
 
 bolsptempFRACTURA=false;
@@ -2281,6 +2322,93 @@ bolarrayempEXTRACCIONINDICADA=false;
 
 }
 
+
+
+
+
+
+
+	
+	
+if(bolsptempCONTACTOABIERTO){
+
+	arraytempCONTACTOABIERTO[sptempCONTACTOABIERTO.id].sp.kill();
+	arraytempCONTACTOABIERTO[sptempCONTACTOABIERTO.id].sp.enhueso=false;
+   
+	arraytempCONTACTOABIERTO[sptempCONTACTOABIERTO.id].sp.estehueso=" no tengo hueso";
+   
+   
+   
+   
+	arraytempCONTACTOABIERTO[sptempCONTACTOABIERTO.id].sp.kill();
+	arraytempCONTACTOABIERTO[sptempCONTACTOABIERTO.id].sp.enhueso=false;
+   
+	arraytempCONTACTOABIERTO[sptempCONTACTOABIERTO.id].sp.estehueso=" no tengo hueso";
+   
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+	
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
 //pff
 
 
@@ -2407,6 +2535,12 @@ bolsoyEDÉNTULO=true;
 
 
 bolsoytempedentutempsp1a=true;
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
 
 
 bolsptempFRACTURA=false;
@@ -2575,6 +2709,14 @@ bolsoytempdientestraidoazul=true;
 
 
 
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+
+
 bolsptempFRACTURA=false;
 
 
@@ -2722,7 +2864,7 @@ bolsoyEDÉNTULO=false;
 
 
 
-
+bolsptempCONTACTOABIERTO=false;
 
 
 bolsptempRESTAURACIONDESBORDANTE=false;
@@ -2893,6 +3035,15 @@ bolsoyEDÉNTULO=false;
 // fin de escalar
 
 bolsoytempcreadienteimpactadoazullinehroja=true;
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
 
 bolsptempFRACTURA=false;
 
@@ -3125,6 +3276,12 @@ bolarrayempEXTRACCIONINDICADA=true;
 
 
 
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
 bolsptempFRACTURA=false;
 
 
@@ -3293,6 +3450,16 @@ sptempREMANENTERADICULAR =thiss;
 
 bolarraytempREMANENTERADICULAR=true;
 
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
 bolsptempFRACTURA=false;
 
 
@@ -3369,9 +3536,7 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 //  creadientempOBTURACIONCONAMALGAMA()
 
 
-var arraytempOBTURACIONCONAMALGAMA=[];
-var bolarraytempOBTURACIONCONAMALGAMA=false;
-var sptempOBTURACIONCONAMALGAMA;
+
 
 function creadientempOBTURACIONCONAMALGAMA(){
 
@@ -3470,6 +3635,15 @@ sptempOBTURACIONCONAMALGAMA=thiss;
 
 bolarraytempOBTURACIONCONAMALGAMA=true;
 
+
+
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
 
 
 
@@ -3655,6 +3829,14 @@ bolsptempOBTURACIONCONRESINA=true;
 
 
 
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
 bolsptempFRACTURA=false;
 
 
@@ -3836,7 +4018,7 @@ sptempOBTURACIÓNTEMPORAL=thiss;
 
 
 
-
+ bolsptempCONTACTOABIERTO=false;
 
 
 
@@ -4048,6 +4230,10 @@ bolsptempRESTAURACIONDESBORDANTE=true;
 
 
 
+bolsptempCONTACTOABIERTO=false;
+
+
+
 
 
 bolsptempFRACTURA=false;
@@ -4125,13 +4311,7 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 //creadientempFRACTURA()
 
-var arraytempFRACTURA=[];
-var sptempFRACTURA;
-var bolsptempFRACTURA=false;
 
-
-
-	
 	
 	
 	
@@ -4250,6 +4430,215 @@ sptempFRACTURA=thiss;
  bolsptempFRACTURA=true;
 
 
+ bolsptempCONTACTOABIERTO=false;
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+// fin creadientempCONTACTOABIERTO()
+
+
+
+
+
+
+
+
+
+var arraytempCONTACTOABIERTO=[];
+var sptempCONTACTOABIERTO;
+var bolsptempCONTACTOABIERTO=false;
+
+
+
+	
+	
+	
+	
+
+	function creadientempCONTACTOABIERTO(){
+	
+		
+		
+
+	
+		
+		
+		arraytempCONTACTOABIERTO.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'CONTACTOABIERTO')});
+	
+	
+	
+	
+	
+	
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.anchor.set(0.5);
+	   
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.scale.set(sc);
+	   
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.id= arraytempCONTACTOABIERTO.length-1;
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.anchor.set(0.5);
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.scale.set(sc);
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.inputEnabled = true;
+	   
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.input.useHandCursor = true;
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.events.onInputDown.add(farraytempCONTACTOABIERTO, this);
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.enhueso=true;
+	   
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.estehueso="tengo hueso";
+	   
+	   
+		sptempCONTACTOABIERTO= arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp;
+	   
+	   
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.inputEnabled = true;
+	   
+	   
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.input.enableDrag(true);
+	   
+	   
+	   
+	   
+	   
+	   
+		arraytempCONTACTOABIERTO[ arraytempCONTACTOABIERTO.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	   
+	   
+
+
+bolsptempCONTACTOABIERTO=true;
+
+
+
+
+bolsptempFRACTURA=false;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=flineasverticalroja;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempCONTACTOABIERTO(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempCONTACTOABIERTO=thiss;
+
+
+
+
+
+bolsptempCONTACTOABIERTO=true;
+	
+
+
+
+
+
+
+		
+ bolsptempFRACTURA=false;
+
+
 
 
 bolsptempRESTAURACIONDESBORDANTE=false;
@@ -4315,20 +4704,7 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 
 
-// fin creadientempFRACTURA()
-
-
-
-
-
-
-
-
-
-
-
-
-
+// fin creadientempCONTACTOABIERTO()
 
 
 
