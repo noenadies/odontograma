@@ -583,10 +583,11 @@ background-color: #1ffc95;
 			<button onclick="creadientempMIGRACION();" class="clbthallazgos" >MIGRACION</button>
 			<button onclick="creadientempTRANSPOSICIÓNDENTAL();" class="clbthallazgos" >TRANSPOSICIÓN DENTAl</button>
 			<button onclick="creadientempSUPERNUMERARIO();" class="clbthallazgos" >SUPERNUMERARIO</button>
+			<button onclick="creadientempCOMPROMISODEFURCA();" class="clbthallazgos" >COMPROMISO DE FURCA</button>
 		
 		  </div>
 		  
-		 
+		  
 		 
 		</div>
 	  </div>
@@ -688,6 +689,22 @@ function fcerrarmenulatedercho(){
 
 
 // variables
+
+
+
+
+
+
+
+
+
+
+var arraytempSUPERNUMERARIO=[];
+var sptempSUPERNUMERARIO;
+var bolsptempSUPERNUMERARIO=false;
+
+
+
 
 
 
@@ -1122,6 +1139,16 @@ function todoiniciadenuenvo(){
 
 
 
+ arraytempSUPERNUMERARIO=[];
+
+ bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+
+
  arraytempTRANSPOSICIÓNDENTAL=[];
 
  bolsptempTRANSPOSICIÓNDENTAL=false;
@@ -1510,7 +1537,7 @@ game.load.image('SUPERNUMERARIO', 'SUPERNUMERARIO.png');
 
 
 
-
+game.load.image('COMPROMISODEFURCA', 'COMPROMISODEFURCA.png');
 
 
 
@@ -1906,7 +1933,7 @@ bolsoytempcaries=true;
 
 
 
-
+bolsptempCOMPROMISODEFURCA=false;
 
 
 
@@ -3741,6 +3768,176 @@ bolarrayempEXTRACCIONINDICADA=false;
 
 
 
+
+
+
+
+
+
+
+if(bolsptempCOMPROMISODEFURCA){
+
+
+	
+
+
+	arraytempCOMPROMISODEFURCA[sptempCOMPROMISODEFURCA.id].sp.kill();
+	arraytempCOMPROMISODEFURCA[sptempCOMPROMISODEFURCA.id].sp.enhueso=false;
+	
+	arraytempCOMPROMISODEFURCA[sptempCOMPROMISODEFURCA.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempCOMPROMISODEFURCA[sptempCOMPROMISODEFURCA.id].sp.kill();
+	arraytempCOMPROMISODEFURCA[sptempCOMPROMISODEFURCA.id].sp.enhueso=false;
+	
+	arraytempCOMPROMISODEFURCA[sptempCOMPROMISODEFURCA.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+bolsptempMIGRACION=false;
+
+
+
+
+
+
+bolsptempGIROVERSION=false;
+
+
+
+
+
+
+bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+bolsptempDIASTEMA=false;
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //pff
 
 
@@ -3867,6 +4064,19 @@ bolsoyEDÉNTULO=true;
 
 
 bolsoytempedentutempsp1a=true;
+
+
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
 
 
 bolsptempSUPERNUMERARIO=false;
@@ -4069,6 +4279,19 @@ bolsoytempdientestraidoazul=true;
 
 
 
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+
+
+
+
+
 bolsptempSUPERNUMERARIO=false;
 
 bolsptempTRANSPOSICIÓNDENTAL=false;
@@ -4258,6 +4481,15 @@ bolsptempGIROVERSION=false;
 
 
 
+
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
 bolsptempSUPERNUMERARIO=false;
 bolsptempTRANSPOSICIÓNDENTAL=false;
 
@@ -4443,6 +4675,17 @@ bolsoyEDÉNTULO=false;
 // fin de escalar
 
 bolsoytempcreadienteimpactadoazullinehroja=true;
+
+
+
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
 
 
 
@@ -4713,6 +4956,14 @@ bolarrayempEXTRACCIONINDICADA=true;
 
 
 
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+
 bolsptempSUPERNUMERARIO=false;
 
 
@@ -4914,6 +5165,19 @@ sptempREMANENTERADICULAR =thiss;
 
 
 bolarraytempREMANENTERADICULAR=true;
+
+
+
+
+
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
 
 
 
@@ -5137,6 +5401,13 @@ bolarraytempOBTURACIONCONAMALGAMA=true;
 
 
 
+
+
+
+
+bolsptempCOMPROMISODEFURCA=false;
+
+
 bolsptempSUPERNUMERARIO=false;
 
 
@@ -5355,7 +5626,7 @@ bolsptempOBTURACIONCONRESINA=true;
 
 
 
-
+bolsptempCOMPROMISODEFURCA=false;
 
 bolsptempSUPERNUMERARIO=false;
 
@@ -5573,6 +5844,14 @@ sptempOBTURACIÓNTEMPORAL=thiss;
  bolsptempOBTURACIÓNTEMPORAL=true;
 
 
+
+
+
+
+
+
+
+ bolsptempCOMPROMISODEFURCA=false;
 
 
 
@@ -5824,7 +6103,7 @@ bolsptempRESTAURACIONDESBORDANTE=true;
 
 
 
-
+bolsptempCOMPROMISODEFURCA=false;
 bolsptempSUPERNUMERARIO=false;
 
 
@@ -6063,6 +6342,18 @@ sptempFRACTURA=thiss;
 	
 		
  bolsptempFRACTURA=true;
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempCOMPROMISODEFURCA=false;
 
 
 
@@ -6313,7 +6604,7 @@ bolsptempCONTACTOABIERTO=true;
 
 
 
-
+bolsptempCOMPROMISODEFURCA=false;
 
 bolsptempSUPERNUMERARIO=false;
 
@@ -6577,7 +6868,7 @@ sptempDIASTEMA=thiss;
 
 
 
-
+ bolsptempCOMPROMISODEFURCA=false;
 
 
  bolsptempSUPERNUMERARIO=false;
@@ -6845,7 +7136,7 @@ sptempSUPERFICIEDESGASTADA=thiss;
 
 
 
-
+ bolsptempCOMPROMISODEFURCA=false;
 
  bolsptempSUPERNUMERARIO=false;
 
@@ -7127,7 +7418,7 @@ bolsptempINTRUSION=true;
 
 
 
-
+bolsptempCOMPROMISODEFURCA=false;
 
 
 bolsptempSUPERNUMERARIO=false;
@@ -7419,7 +7710,7 @@ sptempEXTRUSIÓN=thiss;
 
 
 
-
+ bolsptempCOMPROMISODEFURCA=false;
 
 
  bolsptempSUPERNUMERARIO=false;
@@ -7713,7 +8004,7 @@ sptempGIROVERSION=thiss;
 
 
 
-
+ bolsptempCOMPROMISODEFURCA=false;
 
 
  bolsptempSUPERNUMERARIO=false;
@@ -8031,7 +8322,7 @@ sptempGIROVERSION=thiss;
 
 
 
-
+ bolsptempCOMPROMISODEFURCA=false;
 
 
  bolsptempSUPERNUMERARIO=false;
@@ -8359,6 +8650,14 @@ sptempTRANSPOSICIÓNDENTAL=thiss;
 
 
 
+ bolsptempCOMPROMISODEFURCA=false;
+
+
+
+
+
+
+
  bolsptempSUPERNUMERARIO=false;
 
 
@@ -8510,10 +8809,6 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 //creadientempSUPERNUMERARIO()
 	
-var arraytempSUPERNUMERARIO=[];
-var sptempSUPERNUMERARIO;
-var bolsptempSUPERNUMERARIO=false;
-
 
 
 	
@@ -8691,7 +8986,7 @@ bolsptempSUPERNUMERARIO=true;
 
 
 
-
+bolsptempCOMPROMISODEFURCA=false;
 
 
 
@@ -8851,6 +9146,358 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 
 
+
+
+//creadientempCOMPROMISODEFURCA()
+	
+var arraytempCOMPROMISODEFURCA=[];
+var sptempCOMPROMISODEFURCA;
+var bolsptempCOMPROMISODEFURCA=false;
+
+
+
+	
+	
+
+	function creadientempCOMPROMISODEFURCA(){
+	
+		
+		
+
+	
+
+	
+
+	
+	
+		
+		arraytempCOMPROMISODEFURCA.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'COMPROMISODEFURCA')});
+	
+	
+	
+	
+	
+	
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.anchor.set(0.5);
+	   
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.scale.set(sc);
+	   
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.id= arraytempCOMPROMISODEFURCA.length-1;
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.anchor.set(0.5);
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.scale.set(sc);
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.inputEnabled = true;
+	   
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.input.useHandCursor = true;
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.events.onInputDown.add(farraytempCOMPROMISODEFURCA, this);
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.enhueso=true;
+	   
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.estehueso="tengo hueso";
+	   
+	   
+		sptempCOMPROMISODEFURCA= arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp;
+	   
+	   
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.inputEnabled = true;
+	   
+	   
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.input.enableDrag(true);
+	   
+	   
+	   
+	   
+	   
+	   
+		arraytempCOMPROMISODEFURCA[ arraytempCOMPROMISODEFURCA.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	   
+
+
+
+
+
+
+
+ bolsptempCOMPROMISODEFURCA=true;
+
+
+
+
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+		bolsptempMIGRACION=false;
+
+
+
+
+
+	   
+	
+ bolsptempGIROVERSION=true;
+
+
+
+
+
+ bolsptempEXTRUSIÓN=true;
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+	
+	
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=true;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempCOMPROMISODEFURCA(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempCOMPROMISODEFURCA=thiss;
+
+
+
+
+
+
+bolsptempCOMPROMISODEFURCA=true;
+
+
+bolsptempSUPERNUMERARIO=false;
+
+
+
+
+
+
+
+
+
+ bolsptempTRANSPOSICIÓNDENTAL=false;
+
+
+
+
+
+
+
+
+
+
+ bolsptempMIGRACION=false;
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempGIROVERSION=false;
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+	
+
+
+
+
+
+
+		
+ bolsptempFRACTURA=false;
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+// fin creadientempCOMPROMISODEFURCA()
 
 
 
