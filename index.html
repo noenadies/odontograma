@@ -572,10 +572,12 @@ background-color: #1ffc95;
 			<button onclick="creadientempOBTURACIONCONAMALGAMA();" class="clbthallazgos" >OBTURACION CON AMALGAMA</button>
 			<button onclick="creadientempOBTURACIONCONRESINA();" class="clbthallazgos" >OBTURACION CON RESINA</button>
 			<button onclick="creadientempOBTURACIÓNTEMPORAL();" class="clbthallazgos" >OBTURACIÓN TEMPORAL</button>
+			<button onclick="creadientempRESTAURACIONDESBORDANTE();" class="clbthallazgos" >RESTAURACION DESBORDANTE</button>
+			<button onclick="creadientempFRACTURA();" class="clbthallazgos" >FRACTURA</button>
 		
 		  </div>
 		  
-	
+		  
 		  
 		</div>
 	  </div>
@@ -1201,6 +1203,26 @@ game.load.image('OBTURACIÓNTEMPORAL', 'OBTURACIÓNTEMPORAL.png');
 
 
 
+game.load.image('RESTAURACIONDESBORDANTE', 'RESTAURACIONDESBORDANTE.png');
+
+
+
+
+
+game.load.image('FRACTURA', 'FRACTURA.png');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1583,6 +1605,13 @@ bolsoytempdientestraidoazul=false;
 //fpp
 
 bolsoytempcaries=true;
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
 
 
 bolsptempOBTURACIÓNTEMPORAL=false;
@@ -2105,6 +2134,153 @@ bolarrayempEXTRACCIONINDICADA=false;
 
 
 
+
+
+
+
+
+
+
+
+
+
+	
+if(bolsptempRESTAURACIONDESBORDANTE){
+
+	arraytempRESTAURACIONDESBORDANTE[sptempRESTAURACIONDESBORDANTEL.id].sp.kill();
+	arraytempRESTAURACIONDESBORDANTE[sptempRESTAURACIONDESBORDANTEL.id].sp.enhueso=false;
+	
+	arraytempRESTAURACIONDESBORDANTE[sptempRESTAURACIONDESBORDANTEL.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempRESTAURACIONDESBORDANTE[sptempRESTAURACIONDESBORDANTEL.id].sp.kill();
+	arraytempRESTAURACIONDESBORDANTE[sptempRESTAURACIONDESBORDANTEL.id].sp.enhueso=false;
+	
+	arraytempRESTAURACIONDESBORDANTE[sptempRESTAURACIONDESBORDANTEL.id].sp.estehueso=" no tengo hueso";
+	
+	
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+	
+ if(bolsptempFRACTURA){
+
+	arraytempFRACTURA[sptempFRACTURA.id].sp.kill();
+	arraytempFRACTURA[sptempFRACTURA.id].sp.enhueso=false;
+	
+	arraytempFRACTURA[sptempFRACTURA.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempFRACTURA[sptempFRACTURA.id].sp.kill();
+	arraytempFRACTURA[sptempFRACTURA.id].sp.enhueso=false;
+	
+	arraytempFRACTURA[sptempFRACTURA.id].sp.estehueso=" no tengo hueso";
+	
+	
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+ bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
 //pff
 
 
@@ -2231,6 +2407,18 @@ bolsoyEDÉNTULO=true;
 
 
 bolsoytempedentutempsp1a=true;
+
+
+bolsptempFRACTURA=false;
+
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
 
 bolsptempOBTURACIÓNTEMPORAL=false;
 
@@ -2385,6 +2573,13 @@ bolsoyEDÉNTULO=false;
 
 bolsoytempdientestraidoazul=true;
 
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
 bolsptempOBTURACIÓNTEMPORAL=false;
 
 bolsptempOBTURACIONCONRESINA=false;
@@ -2524,6 +2719,15 @@ bolsoyEDÉNTULO=false;
 
 
 //fpp
+
+
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+bolsptempFRACTURA=false;
+
 
 
 
@@ -2689,6 +2893,20 @@ bolsoyEDÉNTULO=false;
 // fin de escalar
 
 bolsoytempcreadienteimpactadoazullinehroja=true;
+
+bolsptempFRACTURA=false;
+
+
+
+
+
+
+
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
 
 bolsptempOBTURACIÓNTEMPORAL=false;
 
@@ -2905,6 +3123,22 @@ bolarrayempEXTRACCIONINDICADA=true;
 
 
 
+
+
+bolsptempFRACTURA=false;
+
+
+
+
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
 bolsptempOBTURACIÓNTEMPORAL=false;
 
 bolsptempOBTURACIONCONRESINA=false;
@@ -3059,7 +3293,13 @@ sptempREMANENTERADICULAR =thiss;
 
 bolarraytempREMANENTERADICULAR=true;
 
+bolsptempFRACTURA=false;
 
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
 
 bolsptempOBTURACIÓNTEMPORAL=false;
 
@@ -3233,7 +3473,14 @@ bolarraytempOBTURACIONCONAMALGAMA=true;
 
 
 
+bolsptempFRACTURA=false;
 
+
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
 
 
 
@@ -3405,6 +3652,14 @@ sptempOBTURACIONCONRESINA=thiss;
 
 
 bolsptempOBTURACIONCONRESINA=true;
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
 
 bolsptempOBTURACIÓNTEMPORAL=false;
 
@@ -3581,6 +3836,19 @@ sptempOBTURACIÓNTEMPORAL=thiss;
 
 
 
+
+
+
+
+
+
+
+ bolsptempFRACTURA=false;
+
+ bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
 bolsptempOBTURACIONCONRESINA=false;
 
 
@@ -3634,6 +3902,430 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 
 // fin creadientempOBTURACIÓNTEMPORAL()
+
+
+
+
+
+//RESTAURACIONDESBORDANTE
+
+
+
+
+
+
+
+
+//creadientempRESTAURACIONDESBORDANTE()
+
+var arraytempRESTAURACIONDESBORDANTE=[];
+var sptempRESTAURACIONDESBORDANTEL;
+var bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+	
+	
+	
+	
+
+	function creadientempRESTAURACIONDESBORDANTE(){
+	
+		
+		
+
+		
+		
+	
+		
+		arraytempRESTAURACIONDESBORDANTE.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'RESTAURACIONDESBORDANTE')});
+	
+	
+	
+	
+	
+	
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.anchor.set(0.5);
+		
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.scale.set(sc);
+		
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.id=arraytempRESTAURACIONDESBORDANTE.length-1;
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.anchor.set(0.5);
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.scale.set(sc);
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.inputEnabled = true;
+		
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.input.useHandCursor = true;
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.events.onInputDown.add(farraytempRESTAURACIONDESBORDANTE, this);
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.enhueso=true;
+		
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.estehueso="tengo hueso";
+		
+		
+		sptempRESTAURACIONDESBORDANTEL=arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp;
+		
+		
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.inputEnabled = true;
+		
+		
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.input.enableDrag(true);
+		
+		
+		
+		
+		
+		
+		arraytempRESTAURACIONDESBORDANTE[arraytempRESTAURACIONDESBORDANTE.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+		
+		
+	
+		
+	
+
+
+
+
+
+
+
+
+
+		bolsptempRESTAURACIONDESBORDANTE=true;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=flineasverticalroja;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempRESTAURACIONDESBORDANTE(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempRESTAURACIONDESBORDANTEL=thiss;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=true;
+
+
+
+
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+// fin creadientempRESTAURACIONDESBORDANTE()
+
+
+
+
+
+
+
+
+
+
+
+
+
+//creadientempFRACTURA()
+
+var arraytempFRACTURA=[];
+var sptempFRACTURA;
+var bolsptempFRACTURA=false;
+
+
+
+	
+	
+	
+	
+
+	function creadientempFRACTURA(){
+	
+		
+		
+
+	
+		
+		arraytempFRACTURA.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'FRACTURA')});
+	
+	
+	
+	
+	
+	
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.anchor.set(0.5);
+		
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.scale.set(sc);
+		
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.id=arraytempFRACTURA.length-1;
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.anchor.set(0.5);
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.scale.set(sc);
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.inputEnabled = true;
+		
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.input.useHandCursor = true;
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.events.onInputDown.add(farraytempFRACTURA, this);
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.enhueso=true;
+		
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.estehueso="tengo hueso";
+		
+		
+		sptempFRACTURA=arraytempFRACTURA[arraytempFRACTURA.length-1].sp;
+		
+		
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.inputEnabled = true;
+		
+		
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.input.enableDrag(true);
+		
+		
+		
+		
+		
+		
+		arraytempFRACTURA[arraytempFRACTURA.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+		
+		
+
+
+
+
+
+
+bolsptempFRACTURA=true;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=flineasverticalroja;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempFRACTURA(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempFRACTURA=thiss;
+
+
+
+
+
+	
+		
+ bolsptempFRACTURA=true;
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+// fin creadientempFRACTURA()
+
+
+
+
+
+
+
+
+
+
 
 
 
