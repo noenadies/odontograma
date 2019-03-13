@@ -578,10 +578,11 @@ background-color: #1ffc95;
 			<button onclick="creadientempDIASTEMA();" class="clbthallazgos" >DIASTEMA</button>
 			<button onclick="creadientempSUPERFICIEDESGASTADA();" class="clbthallazgos" >SUPERFICIE DESGASTADA</button>
 			<button onclick="creadientempINTRUSION();" class="clbthallazgos" >INTRUSION</button>
+			<button onclick=" creadientempEXTRUSIÓN();" class="clbthallazgos" >EXTRUSIÓN</button>
 		
 		  </div>
 		  
-		  
+		 
 		  
 		</div>
 	  </div>
@@ -678,6 +679,20 @@ function fcerrarmenulatedercho(){
 	document.getElementById("idmenulateralderecho").style.display="none";
 	document.getElementById("idmenulateralzquierdo").style.display="none";
 }
+
+
+
+
+
+var arraytempINTRUSION=[];
+var sptempINTRUSION;
+var bolsptempINTRUSION=false;
+
+
+
+
+
+
 
 
 
@@ -1042,6 +1057,24 @@ function todoiniciadenuenvo(){
 
 
 
+
+
+
+
+
+
+arraytempINTRUSION=[];
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+
  arraytempSUPERFICIEDESGASTADA=[];
 
 bolsptempSUPERFICIEDESGASTADA=false;
@@ -1341,7 +1374,7 @@ game.load.image('SUPERFICIEDESGASTADA', 'SUPERFICIEDESGASTADA.png');
 
 game.load.image('INTRUSION', 'INTRUSION.png');
 
-
+game.load.image('EXTRUSIÓN', 'EXTRUSIÓN.png');
 
 
 
@@ -1721,6 +1754,14 @@ bolsoytempdientestraidoazul=false;
 //fpp
 
 bolsoytempcaries=true;
+
+
+
+
+bolsptempEXTRUSIÓN=false;
+
+
+
 
 
 bolsptempINTRUSION=false;
@@ -2817,6 +2858,133 @@ bolarrayempEXTRACCIONINDICADA=false;
 
 
 
+
+
+
+
+
+	
+ if(bolsptempEXTRUSIÓN){
+
+
+	
+
+
+	arraytempEXTRUSIÓN[sptempEXTRUSIÓN.id].sp.kill();
+	arraytempEXTRUSIÓN[sptempEXTRUSIÓN.id].sp.enhueso=false;
+	
+	arraytempEXTRUSIÓN[sptempEXTRUSIÓN.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempEXTRUSIÓN[sptempEXTRUSIÓN.id].sp.kill();
+	arraytempEXTRUSIÓN[sptempEXTRUSIÓN.id].sp.enhueso=false;
+	
+	arraytempEXTRUSIÓN[sptempEXTRUSIÓN.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+
+
+
+
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+bolsptempDIASTEMA=false;
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 //pff
 
 
@@ -2946,7 +3114,7 @@ bolsoytempedentutempsp1a=true;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 bolsptempINTRUSION=false;
 
@@ -3130,7 +3298,7 @@ bolsoyEDÉNTULO=false;
 bolsoytempdientestraidoazul=true;
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 bolsptempINTRUSION=false;
 
@@ -3305,7 +3473,7 @@ bolsptempSUPERFICIEDESGASTADA=false;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 bolsptempINTRUSION=false;
 
 bolsptempDIASTEMA=false;
@@ -3485,7 +3653,7 @@ bolsoytempcreadienteimpactadoazullinehroja=true;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 bolsptempINTRUSION=false;
 
@@ -3734,7 +3902,7 @@ sptempEXTRACCIONINDICADA =thiss;
 bolarrayempEXTRACCIONINDICADA=true;
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 bolsptempINTRUSION=false;
 
@@ -3925,7 +4093,7 @@ bolarraytempREMANENTERADICULAR=true;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 
 
@@ -4125,7 +4293,7 @@ bolarraytempOBTURACIONCONAMALGAMA=true;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 
 bolsptempINTRUSION=false;
@@ -4326,7 +4494,7 @@ bolsptempOBTURACIONCONRESINA=true;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 bolsptempINTRUSION=false;
 
@@ -4521,7 +4689,7 @@ sptempOBTURACIÓNTEMPORAL=thiss;
 
 
 
-
+ bolsptempEXTRUSIÓN=false;
 
 
  bolsptempINTRUSION=false;
@@ -4743,7 +4911,7 @@ bolsptempRESTAURACIONDESBORDANTE=true;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 bolsptempINTRUSION=false;
 
@@ -4964,7 +5132,7 @@ sptempFRACTURA=thiss;
  bolsptempFRACTURA=true;
 
 
-
+ bolsptempEXTRUSIÓN=false;
 
 
 
@@ -5176,7 +5344,7 @@ sptempCONTACTOABIERTO=thiss;
 
 bolsptempCONTACTOABIERTO=true;
 	
-
+bolsptempEXTRUSIÓN=false;
 
 
 
@@ -5410,6 +5578,14 @@ sptempDIASTEMA=thiss;
 
 
 
+
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=false;
 
 
  bolsptempINTRUSION=false;
@@ -5649,7 +5825,7 @@ sptempSUPERFICIEDESGASTADA=thiss;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 
 
 
@@ -5763,11 +5939,6 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 //creadientempINTRUSION()
 
 	
-var arraytempINTRUSION=[];
-var sptempINTRUSION;
-var bolsptempINTRUSION=false;
-
-
 
 	
 	
@@ -5920,7 +6091,7 @@ bolsptempINTRUSION=true;
 
 
 
-
+bolsptempEXTRUSIÓN=false;
 
  bolsptempSUPERFICIEDESGASTADA=false;
 
@@ -6026,6 +6197,282 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 
 
+//creadientempEXTRUSIÓN()
+
+	
+var arraytempEXTRUSIÓN=[];
+var sptempEXTRUSIÓN;
+var bolsptempEXTRUSIÓN=false;
+
+
+
+	
+	
+
+	function creadientempEXTRUSIÓN(){
+	
+		
+		
+
+	
+
+	
+
+	
+	
+		
+		arraytempEXTRUSIÓN.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'EXTRUSIÓN')});
+	
+	
+	
+	
+	
+	
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.anchor.set(0.5);
+	   
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.scale.set(sc);
+	   
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.id= arraytempEXTRUSIÓN.length-1;
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.anchor.set(0.5);
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.scale.set(sc);
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.inputEnabled = true;
+	   
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.input.useHandCursor = true;
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.events.onInputDown.add(farraytempEXTRUSIÓN, this);
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.enhueso=true;
+	   
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.estehueso="tengo hueso";
+	   
+	   
+		sptempEXTRUSIÓN= arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp;
+	   
+	   
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.inputEnabled = true;
+	   
+	   
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.input.enableDrag(true);
+	   
+	   
+	   
+	   
+	   
+	   
+		arraytempEXTRUSIÓN[ arraytempEXTRUSIÓN.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	   
+	   
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=true;
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+	
+	
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=flineasverticalroja;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempEXTRUSIÓN(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempEXTRUSIÓN=thiss;
+
+
+
+
+ bolsptempEXTRUSIÓN=true;
+
+
+
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+	
+
+
+
+
+
+
+		
+ bolsptempFRACTURA=false;
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+// fin creadientempEXTRUSIÓN()
 
 
 
