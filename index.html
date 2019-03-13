@@ -580,10 +580,11 @@ background-color: #1ffc95;
 			<button onclick="creadientempINTRUSION();" class="clbthallazgos" >INTRUSION</button>
 			<button onclick=" creadientempEXTRUSIÓN();" class="clbthallazgos" >EXTRUSIÓN</button>
 			<button onclick="creadientempGIROVERSION();" class="clbthallazgos" >GIROVERSION</button>
+			<button onclick="creadientempMIGRACION();" class="clbthallazgos" >MIGRACION</button>
 		
 		  </div>
 		  
-		 
+		
 		 
 		</div>
 	  </div>
@@ -680,6 +681,27 @@ function fcerrarmenulatedercho(){
 	document.getElementById("idmenulateralderecho").style.display="none";
 	document.getElementById("idmenulateralzquierdo").style.display="none";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+var arraytempGIROVERSION=[];
+var sptempGIROVERSION;
+var bolsptempGIROVERSION=false;
+
+
+
+
+
 
 
 
@@ -1073,6 +1095,22 @@ function todoiniciadenuenvo(){
 
 
 
+
+
+
+arraytempGIROVERSION=[];
+
+ bolsptempGIROVERSION=false;
+
+
+
+
+
+
+
+
+
+
 arraytempEXTRUSIÓN=[];
 
  bolsptempEXTRUSIÓN=false;
@@ -1405,7 +1443,7 @@ game.load.image('GIROVERSION', 'GIROVERSION.png');
 
 
 
-
+game.load.image('MIGRACION', 'MIGRACION.png');
 
 
 
@@ -1785,7 +1823,7 @@ bolsoytempdientestraidoazul=false;
 
 bolsoytempcaries=true;
 
-
+bolsptempMIGRACION=false;
 
 
 
@@ -3160,6 +3198,142 @@ bolarrayempEXTRACCIONINDICADA=false;
 
 
 
+
+
+ if(bolsptempMIGRACION){
+
+
+	
+
+
+	arraytempMIGRACION[sptempMIGRACION.id].sp.kill();
+	arraytempMIGRACION[sptempMIGRACION.id].sp.enhueso=false;
+	
+	arraytempMIGRACION[sptempMIGRACION.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	arraytempMIGRACION[sptempMIGRACION.id].sp.kill();
+	arraytempMIGRACION[sptempMIGRACION.id].sp.enhueso=false;
+	
+	arraytempMIGRACION[sptempMIGRACION.id].sp.estehueso=" no tengo hueso";
+	
+	
+	
+	
+	
+
+
+
+
+
+
+document.getElementById("idpaneleliminar").style.display="none";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempMIGRACION=false;
+
+
+
+
+
+
+bolsptempGIROVERSION=false;
+
+
+
+
+
+
+bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+bolsptempDIASTEMA=false;
+
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+bolsptempOBTURACIÓNTEMPORAL=false;
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+bolsoytempdientestraidoazul=false;
+bolsoytempcaries=false;
+bolsoytempedentutempsp1a=false;
+bolsoyEDÉNTULO=false;
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+
+
+
+
+
+}
+
+
+
+
+
+
 //pff
 
 
@@ -3292,7 +3466,7 @@ bolsoytempedentutempsp1a=true;
 
 
 
-
+bolsptempMIGRACION=false;
 
 
 bolsptempGIROVERSION=false;
@@ -3492,7 +3666,7 @@ bolsoytempdientestraidoazul=true;
 
 
 
-
+bolsptempMIGRACION=false;
 
 bolsptempGIROVERSION=false;
 
@@ -3680,7 +3854,7 @@ bolsptempGIROVERSION=false;
 
 
 
-
+bolsptempMIGRACION=false;
 
 bolsptempSUPERFICIEDESGASTADA=false;
 
@@ -3869,7 +4043,7 @@ bolsoytempcreadienteimpactadoazullinehroja=true;
 
 
 
-
+bolsptempMIGRACION=false;
 bolsptempGIROVERSION=false;
 
 
@@ -4130,7 +4304,7 @@ bolarrayempEXTRACCIONINDICADA=true;
 
 
 
-
+bolsptempMIGRACION=false;
 
 bolsptempGIROVERSION=false;
 
@@ -4334,7 +4508,7 @@ bolarraytempREMANENTERADICULAR=true;
 
 
 
-
+bolsptempMIGRACION=false;
 
 
 
@@ -4545,7 +4719,7 @@ bolarraytempOBTURACIONCONAMALGAMA=true;
 
 
 
-
+bolsptempMIGRACION=false;
 
 bolsptempGIROVERSION=false;
 
@@ -4753,6 +4927,17 @@ bolsptempOBTURACIONCONRESINA=true;
 
 
 
+
+bolsptempMIGRACION=false;
+
+
+
+
+
+
+
+
+
 bolsptempGIROVERSION=false;
 
 
@@ -4949,6 +5134,16 @@ sptempOBTURACIÓNTEMPORAL=thiss;
 
  bolsptempOBTURACIÓNTEMPORAL=true;
 
+
+
+
+
+
+
+
+
+
+ bolsptempMIGRACION=false;
 
 
 
@@ -5185,6 +5380,18 @@ bolsptempRESTAURACIONDESBORDANTE=true;
 
 
 
+
+
+
+
+
+bolsptempMIGRACION=false;
+
+
+
+
+
+
 bolsptempGIROVERSION=false;
 
 
@@ -5414,6 +5621,19 @@ sptempFRACTURA=thiss;
 
 
 
+
+
+
+
+
+
+
+
+ bolsptempMIGRACION=false;
+
+
+
+
  bolsptempGIROVERSION=false;
 
 
@@ -5633,6 +5853,18 @@ sptempCONTACTOABIERTO=thiss;
 
 
 bolsptempCONTACTOABIERTO=true;
+
+
+
+
+
+
+
+
+bolsptempMIGRACION=false;
+
+
+
 
 
 
@@ -5878,6 +6110,18 @@ sptempDIASTEMA=thiss;
 
 
  bolsptempDIASTEMA=true;
+
+
+
+
+
+
+
+
+ bolsptempMIGRACION=false;
+
+
+
 
 
  bolsptempGIROVERSION=false;
@@ -6134,7 +6378,7 @@ sptempSUPERFICIEDESGASTADA=thiss;
 
 
 
-
+ bolsptempMIGRACION=false;
 
  bolsptempGIROVERSION=false;
 
@@ -6398,6 +6642,19 @@ sptempINTRUSION=thiss;
 
 
 bolsptempINTRUSION=true;
+
+
+
+
+
+bolsptempMIGRACION=false;
+
+
+
+
+
+
+
 
 
 bolsptempGIROVERSION=false;
@@ -6671,7 +6928,7 @@ sptempEXTRUSIÓN=thiss;
 
 
 
-
+ bolsptempMIGRACION=false;
 
  bolsptempGIROVERSION=false;
 
@@ -6792,10 +7049,6 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 //creadientempGIROVERSION()
 	
-var arraytempGIROVERSION=[];
-var sptempGIROVERSION;
-var bolsptempGIROVERSION=false;
-
 
 
 	
@@ -6960,7 +7213,7 @@ sptempGIROVERSION=thiss;
 
 
 
-
+ bolsptempMIGRACION=false;
 
  bolsptempEXTRUSIÓN=false;
 
@@ -7081,6 +7334,334 @@ vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
 
 // fin creadientempGIROVERSION()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//creadientempMIGRACION()
+	
+var arraytempMIGRACION=[];
+var sptempMIGRACION;
+var bolsptempMIGRACION=false;
+
+
+
+	
+	
+
+	function creadientempMIGRACION(){
+	
+		
+		
+
+	
+
+	
+
+	
+	
+		
+		arraytempMIGRACION.push({sp:game.add.sprite(tempdiete.x-(tempposition.x), tempdiete.y+(tempposition.y), 'MIGRACION')});
+	
+	
+	
+	
+	
+	
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.anchor.set(0.5);
+	   
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.scale.set(sc);
+	   
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.id= arraytempMIGRACION.length-1;
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.anchor.set(0.5);
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.scale.set(sc);
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.inputEnabled = true;
+	   
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.input.useHandCursor = true;
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.events.onInputDown.add(farraytempMIGRACION, this);
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.enhueso=true;
+	   
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.estehueso="tengo hueso";
+	   
+	   
+		sptempMIGRACION= arraytempMIGRACION[ arraytempMIGRACION.length-1].sp;
+	   
+	   
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.inputEnabled = true;
+	   
+	   
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.input.enableDrag(true);
+	   
+	   
+	   
+	   
+	   
+	   
+		arraytempMIGRACION[ arraytempMIGRACION.length-1].sp.estoyconeldienteenarray=tempdiete.soyelenarray;
+	   
+
+
+
+
+
+
+
+		bolsptempMIGRACION=true;
+
+
+
+
+
+	   
+	
+ bolsptempGIROVERSION=true;
+
+
+
+
+
+ bolsptempEXTRUSIÓN=true;
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+	
+	
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+bolsptempCONTACTOABIERTO=false;
+
+
+
+
+bolsptempFRACTURA=false;
+
+		bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+		bolsptempOBTURACIÓNTEMPORAL=false;
+
+	bolsptempOBTURACIONCONRESINA=true;
+	
+	bolarraytempOBTURACIONCONAMALGAMA=false;
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function farraytempMIGRACION(thiss){
+//fpp
+
+// esto es oara escalar
+bolsoyEDÉNTULO=false;
+// fin de escalar
+
+sptempGIROVERSION=thiss;
+
+
+
+
+
+
+
+ bolsptempMIGRACION=true;
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempGIROVERSION=false;
+
+
+
+
+
+
+ bolsptempEXTRUSIÓN=false;
+
+
+
+
+
+
+
+
+
+
+bolsptempINTRUSION=false;
+
+
+
+
+
+
+
+
+ bolsptempSUPERFICIEDESGASTADA=false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ bolsptempDIASTEMA=false;
+
+
+
+
+
+bolsptempCONTACTOABIERTO=false;
+	
+
+
+
+
+
+
+		
+ bolsptempFRACTURA=false;
+
+
+
+
+bolsptempRESTAURACIONDESBORDANTE=false;
+
+
+
+
+
+
+
+ bolsptempOBTURACIÓNTEMPORAL=false;
+
+
+
+bolsptempOBTURACIONCONRESINA=false;
+
+
+
+bolarraytempOBTURACIONCONAMALGAMA=false;
+
+
+
+
+
+bolarraytempREMANENTERADICULAR=false;
+
+
+
+
+
+bolarrayempEXTRACCIONINDICADA=false;
+bolsoytempcreadienteimpactadoazullinehroja=false;
+
+bolsoytempdientestraidoazul=false;
+
+bolsoytempcaries=false;
+
+bolsoytempedentutempsp1a=false;
+
+
+if(siarrastrar){ siarrastrsi();}
+
+if(sieditarclinica){sieditarlo(thiss);}
+if(sieliminar){
+siiraeliminar(thiss);
+}
+
+
+
+vactivodiente.x=arrayspd[thiss.estoyconeldienteenarray].spd.x;
+vactivodiente.y=arrayspd[thiss.estoyconeldienteenarray].spd.y;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+// fin creadientempGIROVERSION()
 
 
 
